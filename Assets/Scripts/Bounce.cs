@@ -9,11 +9,12 @@ public class Bounce : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocity = velocity;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.linearVelocity = velocity;
+        // rb.linearVelocity = velocity;
     }
 }
