@@ -12,8 +12,9 @@ public class Rotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        rb.angularVelocity = 0;
         transform.Rotate(0.0f,0.0f, RotationSpeed, Space.Self);
         
     }
