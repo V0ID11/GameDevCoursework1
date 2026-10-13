@@ -15,7 +15,7 @@ public class Rotate : MonoBehaviour
     void FixedUpdate()
     {
         rb.angularVelocity = 0;
-        transform.Rotate(0.0f,0.0f, RotationSpeed, Space.Self);
+        transform.Rotate(0.0f,0.0f, RotationSpeed * GameSettings.GlobalSpeedMultplier, Space.Self);
         
     }
 }
