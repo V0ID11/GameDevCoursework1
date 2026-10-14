@@ -208,7 +208,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.4834, y: -4.11763, z: 0}
-  m_LocalScale: {x: 15.160075, y: 0.51252764, z: 1}
+  m_LocalScale: {x: 20, y: 0.51252764, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1742651095}
@@ -294,6 +294,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -431,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 344053527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.48339987, y: 0.88237, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0, z: 0}
   m_LocalScale: {x: 15.160075, y: 0.51252764, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -518,6 +522,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
@@ -656,7 +664,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.4834, y: 5.88237, z: 0}
-  m_LocalScale: {x: 15.160075, y: 0.51252764, z: 1}
+  m_LocalScale: {x: 20, y: 0.51252764, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1742651095}
@@ -871,6 +879,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528662648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2839975450338596557, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
+  m_PrefabInstance: {fileID: 1827188804456809804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &528662655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528662648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea34cd71554f84048e92bbff05fa154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlowTime
 --- !u!1001 &599374183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -879,6 +904,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
@@ -1044,6 +1073,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (6)
@@ -1101,6 +1134,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -1158,6 +1195,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -1295,7 +1336,7 @@ Transform:
   m_GameObject: {fileID: 1721299818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 14.4834, y: 0.88237, z: 0}
+  m_LocalPosition: {x: 16.5, y: 0, z: 0}
   m_LocalScale: {x: 15.160075, y: 0.51252764, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1421,6 +1462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4422499192200473564, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5948878520615162886, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1485,10 +1530,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6753585025048845548, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2839975450338596557, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 528662655}
   m_SourcePrefab: {fileID: 100100000, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
 --- !u!1001 &4357369061481695518
 PrefabInstance:
@@ -1498,6 +1550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422916908886596920, guid: 7cff87d7b4226297289057298a511fea, type: 3}
+      propertyPath: RotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 426271316945368693, guid: 7cff87d7b4226297289057298a511fea, type: 3}
       propertyPath: m_Name
       value: Enemy

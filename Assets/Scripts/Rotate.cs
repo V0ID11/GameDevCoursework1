@@ -12,10 +12,10 @@ public class Rotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         rb.angularVelocity = 0;
-        transform.Rotate(0.0f,0.0f, RotationSpeed * GameSettings.GlobalSpeedMultplier, Space.Self);
+        transform.Rotate(0.0f,0.0f, RotationSpeed * Time.deltaTime, Space.Self);
         
     }
 }

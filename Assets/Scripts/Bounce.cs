@@ -5,7 +5,7 @@ public class Bounce : MonoBehaviour
 {
     Rigidbody2D rb;
     public Vector2 velocity;
-    // public VelocityMult velocityMult;
+    
     public int totalVelocity;
     int upDirection;
     int sideDirection;
@@ -17,7 +17,7 @@ public class Bounce : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector2 lv = rb.linearVelocity;
 
@@ -26,12 +26,12 @@ public class Bounce : MonoBehaviour
         sideDirection = (lv.x >= 0) ? 1 : -1;
 
 
-        if (Mathf.Abs(lv.y) < (0.1f * GameSettings.GlobalSpeedMultplier)) {
-            lv.y = 0.5f * GameSettings.GlobalSpeedMultplier * upDirection * 5;
+        if (Mathf.Abs(lv.y) < (0.1f  )) {
+            lv.y = 0.5f   * upDirection * 5;
         }
 
-        if (Mathf.Abs(lv.x) < (0.1f * GameSettings.GlobalSpeedMultplier)) {
-            lv.x = 0.5f * GameSettings.GlobalSpeedMultplier * sideDirection;
+        if (Mathf.Abs(lv.x) < (0.1f  )) {
+            lv.x = 0.5f   * sideDirection;
         }
 
         upDirection = (lv.y >= 0) ? 1 : -1;
@@ -39,7 +39,7 @@ public class Bounce : MonoBehaviour
 
         float angle = Mathf.Atan(Mathf.Abs(lv.y) / Mathf.Abs(lv.x));
 
-        float currentSpeed = totalVelocity * GameSettings.GlobalSpeedMultplier;
+        float currentSpeed = totalVelocity  ;
         rb.linearVelocity = new Vector2(
             Mathf.Cos(angle) * currentSpeed * sideDirection, 
             Mathf.Sin(angle) * currentSpeed * upDirection
@@ -54,6 +54,6 @@ public class Bounce : MonoBehaviour
         int upDirection = (mouseLocation.y - transform.position.y > 0) ? 1 : -1;
         int sideDirection = (mouseLocation.x - transform.position.x > 0) ? 1 : -1;
         
-        rb.linearVelocity = new Vector2(Mathf.Cos(angle) * (totalVelocity * GameSettings.GlobalSpeedMultplier) * sideDirection, Mathf.Sin(angle) * (totalVelocity * GameSettings.GlobalSpeedMultplier) * upDirection);
+        rb.linearVelocity = new Vector2(Mathf.Cos(angle) * (totalVelocity  ) * sideDirection, Mathf.Sin(angle) * (totalVelocity  ) * upDirection);
     }
 }
