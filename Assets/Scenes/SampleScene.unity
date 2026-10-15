@@ -1508,27 +1508,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6353489542973365419, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353489542973365419, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.178478
       objectReference: {fileID: 0}
     - target: {fileID: 6353489542973365419, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667153156657396283, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6667153156657396283, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.30368388
       objectReference: {fileID: 0}
     - target: {fileID: 6667153156657396283, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6753585025048845548, guid: d92f39416070bb59b909a77dff2cef04, type: 3}
       propertyPath: RotationSpeed
