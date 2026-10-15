@@ -17,7 +17,7 @@ public class Bounce : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector2 lv = rb.linearVelocity;
 
