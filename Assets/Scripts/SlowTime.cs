@@ -19,9 +19,9 @@ public class SlowTime : MonoBehaviour
     void Update()
     {
         if (SlowAction.triggered && timeout <= 0) {
-            Time.timeScale  = 0.4f;
-            timeout = 5;
-            slowTiming = 1;
+            Time.timeScale  = 0.5f;
+            timeout = 5f;
+            slowTiming = 1.5f;
             slowed = true;
             
         }
