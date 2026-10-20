@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6667153156657396283}
   - component: {fileID: 20194273935371588}
   - component: {fileID: 5275665690010097738}
+  - component: {fileID: 8143602915732041371}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -158,6 +159,19 @@ PolygonCollider2D:
       - {x: -0.105360925, y: -0.40824306}
       - {x: 0.21548337, y: -0.25785252}
   m_UseDelaunayMesh: 1
+--- !u!114 &8143602915732041371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958304577100329641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  damage: 5
 --- !u!1 &2839975450338596557
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +185,7 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 2928444556464199117}
+  - component: {fileID: 1684196403710384131}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -285,6 +300,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirection
   timeout: 0
+--- !u!114 &1684196403710384131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31be171a72b531531b1bbb47d9200823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  health: 10
 --- !u!1 &6694536040780682248
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +322,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486568262297856177}
-  m_Layer: 7
+  - component: {fileID: 4462908430351774288}
+  - component: {fileID: 3566581686161035974}
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,6 +347,54 @@ Transform:
   - {fileID: 8711960543289683160}
   m_Father: {fileID: 5948878520615162886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4462908430351774288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694536040780682248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab10b8f9699b3d778b89d75efeeb4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHit
+--- !u!58 &3566581686161035974
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694536040780682248}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &7872204614250350932
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8711960543289683160}
   - component: {fileID: 6353489542973365419}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Body_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
