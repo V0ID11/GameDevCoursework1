@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 655190462969445835}
   - component: {fileID: 6667153156657396283}
-  - component: {fileID: 8768836611867503272}
   - component: {fileID: 20194273935371588}
+  - component: {fileID: 5275665690010097738}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958304577100329641}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.92600894, w: 0.37750143}
+  m_LocalRotation: {x: -0, y: -0, z: -0.926009, w: 0.37750146}
   m_LocalPosition: {x: 0.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5948878520615162886}
+  m_Father: {fileID: 8058414124949245402}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135.642}
 --- !u!212 &6667153156657396283
 SpriteRenderer:
@@ -94,8 +94,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!61 &8768836611867503272
-BoxCollider2D:
+--- !u!114 &20194273935371588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958304577100329641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a347a80f6247fd5dae0d764e226ef29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BladeCollision
+--- !u!60 &5275665690010097738
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,20 +150,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &20194273935371588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958304577100329641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a347a80f6247fd5dae0d764e226ef29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BladeCollision
+  m_Points:
+    m_Paths:
+    - - {x: 0.3881923, y: 0.110783756}
+      - {x: -0.37417093, y: 0.5066275}
+      - {x: -0.51289773, y: 0.3366366}
+      - {x: -0.105360925, y: -0.40824306}
+      - {x: 0.21548337, y: -0.25785252}
+  m_UseDelaunayMesh: 1
 --- !u!1 &2839975450338596557
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +170,6 @@ GameObject:
   - component: {fileID: 1315272222326997221}
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
-  - component: {fileID: 6753585025048845548}
   - component: {fileID: 2928444556464199117}
   m_Layer: 7
   m_Name: Player
@@ -186,8 +191,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8711960543289683160}
-  - {fileID: 655190462969445835}
+  - {fileID: 486568262297856177}
+  - {fileID: 8058414124949245402}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1315272222326997221
@@ -252,7 +257,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7967876725790558965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,19 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
   totalVelocity: 5
---- !u!114 &6753585025048845548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839975450338596557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  RotationSpeed: 1000
 --- !u!114 &2928444556464199117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +285,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirection
   timeout: 0
+--- !u!1 &6694536040780682248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486568262297856177}
+  m_Layer: 7
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486568262297856177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694536040780682248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8711960543289683160}
+  m_Father: {fileID: 5948878520615162886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7872204614250350932
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,9 +327,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8711960543289683160}
   - component: {fileID: 6353489542973365419}
-  - component: {fileID: 9078863518699167695}
-  m_Layer: 0
-  m_Name: Body
+  m_Layer: 7
+  m_Name: Body_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,11 +343,11 @@ Transform:
   m_GameObject: {fileID: 7872204614250350932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.087, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5948878520615162886}
+  m_Father: {fileID: 486568262297856177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6353489542973365419
 SpriteRenderer:
@@ -373,7 +396,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3938160259636154549, guid: 2ad159775714cc64b88102cd1a96d554, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -386,39 +409,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!58 &9078863518699167695
-CircleCollider2D:
+--- !u!1 &9010939986241759459
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7872204614250350932}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8058414124949245402}
+  - component: {fileID: 2186682433964827906}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8058414124949245402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010939986241759459}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 655190462969445835}
+  m_Father: {fileID: 5948878520615162886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2186682433964827906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010939986241759459}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotate
+  RotationSpeed: 400
