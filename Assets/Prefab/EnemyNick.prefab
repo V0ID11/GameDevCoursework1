@@ -33,8 +33,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2717125522160007703}
   - {fileID: 5307678217028123849}
+  - {fileID: 2717125522160007703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &3441395114384381388
@@ -137,8 +137,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5307678217028123849}
   - component: {fileID: 6499501532452352007}
-  - component: {fileID: 3927147106164902161}
   - component: {fileID: 4550379618369966092}
+  - component: {fileID: 7455067615870991867}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -154,13 +154,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4936331100985031294}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
-  m_LocalScale: {x: 0.6213, y: 0.2626, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9227534, w: 0.38539097}
+  m_LocalPosition: {x: 0.862, y: -0.03200001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7426446286622195785}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -494.664}
 --- !u!212 &6499501532452352007
 SpriteRenderer:
   serializedVersion: 3
@@ -210,19 +210,31 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.15, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!61 &3927147106164902161
-BoxCollider2D:
+--- !u!114 &4550379618369966092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936331100985031294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a347a80f6247fd5dae0d764e226ef29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BladeCollision
+--- !u!60 &7455067615870991867
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -259,26 +271,21 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 1}
+    newSize: {x: 0.15, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &4550379618369966092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4936331100985031294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a347a80f6247fd5dae0d764e226ef29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BladeCollision
+  m_Points:
+    m_Paths:
+    - - {x: 0.5613305, y: -0.14855143}
+      - {x: 0.34827566, y: 0.08899226}
+      - {x: -0.3354815, y: 0.49633282}
+      - {x: -0.49053058, y: 0.34087574}
+      - {x: -0.091213614, y: -0.43144387}
+      - {x: 0.07592569, y: -0.59351027}
+  m_UseDelaunayMesh: 1
 --- !u!1 &7004930404492765815
 GameObject:
   m_ObjectHideFlags: 0

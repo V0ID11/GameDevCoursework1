@@ -1,0 +1,90 @@
+[33mcommit 4709ce9272704087eac46cf2e90f813053dc2b56[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmerging2[m[33m)[m
+Merge: 6804fc2 5c40f02
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Tue Oct 20 14:49:05 2026 +0100
+
+    Pray more
+
+[33mcommit 6804fc24452d838864ae24bb84e1ed0731a40069[m[33m ([m[1;32mmain[m[33m)[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Tue Oct 20 14:46:53 2026 +0100
+
+    Pray
+
+[33mcommit 5c40f029d5aa402eef606096d67d51d4a7ef6f89[m[33m ([m[1;31morigin/initial_sprites[m[33m)[m
+Author: Joe Williams <jw06saturn@gmail.com>
+Date:   Tue Oct 20 14:38:06 2026 +0100
+
+    rotation freeze and more sprites
+
+[33mcommit c2811e92ee625a065b66cc4348edc92717c5c1e0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmerging[m[33m)[m
+Merge: b6c9ddc cd8f168
+Author: Nick Gurney <95875131+V0ID11@users.noreply.github.com>
+Date:   Thu Oct 15 16:11:37 2026 +0100
+
+    Merge pull request #1 from V0ID11/HealthSystem
+    
+    Health System included
+
+[33mcommit 0ba38136ec292ae3a4e2b08733392abbbe84151f[m
+Author: Joe Williams <jw06saturn@gmail.com>
+Date:   Thu Oct 15 15:51:35 2026 +0100
+
+    sprites
+    
+    added sprites
+    rotation and collision are kinda broken now lol
+
+[33mcommit cd8f168e8e23b8bc5b4c667a7c8ad190593a5848[m[33m ([m[1;31morigin/HealthSystem[m[33m, [m[1;32mHealthSystem[m[33m)[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Thu Oct 15 15:46:23 2026 +0100
+
+    Health System included
+
+[33mcommit b6c9ddcae5970cc54dafe546183e6efc6f35af6c[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Wed Oct 14 16:51:02 2026 +0100
+
+    SlowingTime!
+
+[33mcommit 39aa958bc016158e7c396b5c69ece06473bfd076[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Tue Oct 13 16:54:24 2026 +0100
+
+    Player Movement
+
+[33mcommit 1d9f63db4f277884e6e10e955d0e4c9f1c5653fb[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Sat Oct 10 13:11:41 2026 +0100
+
+    Fixed Elastic collisions, plus invert sword path on collision with sword
+
+[33mcommit 8e09a06cde6ef092b79287f71849bbb50a80c01f[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Thu Oct 8 15:46:58 2026 +0100
+
+    Trying to fix bounce
+
+[33mcommit a1868a129f830dda2faa61f856c551443f743b77[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Thu Oct 8 15:08:30 2026 +0100
+
+    Rotation!!
+
+[33mcommit 2beefc9e406d3a24f07ebc9a89fa9706687a0ef1[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Thu Oct 8 14:42:53 2026 +0100
+
+    Initial Movement and Bounce
+
+[33mcommit ddc8fae0ca082469439ce06cab340260ac706682[m
+Author: V0ID11 <nickdgurney@gmail.com>
+Date:   Tue Oct 6 15:41:16 2026 +0100
+
+    Initial Commit
+
+[33mcommit f93322c30b6b9405f5ee1117b3d937191db6f6eb[m
+Author: Nick Gurney <95875131+V0ID11@users.noreply.github.com>
+Date:   Tue Oct 6 15:35:05 2026 +0100
+
+    Initial commit
