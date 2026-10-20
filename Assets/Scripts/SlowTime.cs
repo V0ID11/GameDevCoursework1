@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 public class SlowTime : MonoBehaviour
 {
     InputAction SlowAction;
-    float timeout=0;
+    public float cooldown;
+    float timeout = 0;
     float slowTiming=0;
     bool slowed = false;
 
@@ -20,7 +21,7 @@ public class SlowTime : MonoBehaviour
     {
         if (SlowAction.triggered && timeout <= 0) {
             Time.timeScale  = 0.5f;
-            timeout = 5f;
+            timeout = cooldown;
             slowTiming = 1.5f;
             slowed = true;
             
