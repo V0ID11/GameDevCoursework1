@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 8281888711076594616}
   - component: {fileID: 2242198556516986506}
   m_Layer: 7
-  m_Name: Player
+  m_Name: SwordPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
