@@ -14,6 +14,36 @@ public class Bounce : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = velocity;
+        
+        if (gameObject.tag == "Player"){
+            velocity = new Vector2(1f,0f);
+        } else {
+            velocity = new Vector2(Random.Range(-10,10), Random.Range(-10,10) );
+            Debug.Log("here");
+        }
+
+        upDirection = (velocity.y >= 0) ? 1 : -1;
+        sideDirection = (velocity.x >= 0) ? 1 : -1;
+
+
+        if (Mathf.Abs(velocity.y) < (0.1f  )) {
+            velocity.y = 0.5f   * upDirection * 5;
+        }
+
+        if (Mathf.Abs(velocity.x) < (0.1f  )) {
+            velocity.x = 0.5f   * sideDirection;
+        }
+
+        upDirection = (velocity.y >= 0) ? 1 : -1;
+        sideDirection = (velocity.x >= 0) ? 1 : -1;
+
+        float angle = Mathf.Atan(Mathf.Abs(velocity.y) / Mathf.Abs(velocity.x));
+
+        float currentSpeed = totalVelocity  ;
+        rb.linearVelocity = new Vector2(
+            Mathf.Cos(angle) * currentSpeed * sideDirection, 
+            Mathf.Sin(angle) * currentSpeed * upDirection
+        );
     }
 
     // Update is called once per frame
