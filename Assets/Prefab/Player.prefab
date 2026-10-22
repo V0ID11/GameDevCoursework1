@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6667153156657396283}
   - component: {fileID: 20194273935371588}
   - component: {fileID: 5275665690010097738}
-  - component: {fileID: 8143602915732041371}
+  - component: {fileID: 380495358924219099}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -159,7 +159,7 @@ PolygonCollider2D:
       - {x: -0.105360925, y: -0.40824306}
       - {x: 0.21548337, y: -0.25785252}
   m_UseDelaunayMesh: 1
---- !u!114 &8143602915732041371
+--- !u!114 &380495358924219099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,7 +185,8 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 2928444556464199117}
-  - component: {fileID: 1684196403710384131}
+  - component: {fileID: 8281888711076594616}
+  - component: {fileID: 2242198556516986506}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -300,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirection
   timeout: 0
---- !u!114 &1684196403710384131
+--- !u!114 &8281888711076594616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 10
+--- !u!114 &2242198556516986506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea34cd71554f84048e92bbff05fa154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlowTime
 --- !u!1 &6694536040780682248
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,8 +335,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486568262297856177}
-  - component: {fileID: 4462908430351774288}
-  - component: {fileID: 3566581686161035974}
+  - component: {fileID: 6429364936975922130}
+  - component: {fileID: 3377907009877284446}
   m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
@@ -347,19 +360,7 @@ Transform:
   - {fileID: 8711960543289683160}
   m_Father: {fileID: 5948878520615162886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4462908430351774288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6694536040780682248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bab10b8f9699b3d778b89d75efeeb4ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponHit
---- !u!58 &3566581686161035974
+--- !u!58 &6429364936975922130
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,6 +396,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &3377907009877284446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694536040780682248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab10b8f9699b3d778b89d75efeeb4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHit
 --- !u!1 &7872204614250350932
 GameObject:
   m_ObjectHideFlags: 0
