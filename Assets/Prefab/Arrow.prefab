@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8782361854205958040}
   - component: {fileID: 8908401133137204956}
   - component: {fileID: 7597031213587877665}
+  - component: {fileID: 2470763838989842483}
+  - component: {fileID: 5527449229961762338}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -111,7 +113,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -188,3 +190,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   velocity: {x: 0, y: 0}
+--- !u!114 &2470763838989842483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879182552150183790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  damage: 1
+--- !u!114 &5527449229961762338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879182552150183790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2468a50e046580bcb4f9a3eb1f3b179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrowCollision
