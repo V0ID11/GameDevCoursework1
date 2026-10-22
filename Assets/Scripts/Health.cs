@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 10;
+    public int totalHealth;
+    public int current_health;
 
     public void SubtractHealth(int damage){
         health -= damage; 

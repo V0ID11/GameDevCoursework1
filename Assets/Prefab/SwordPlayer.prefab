@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0da073651596a9d8c935ce644fb624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeDirection
-  timeout: 0
+  cooldown: 0
 --- !u!114 &8281888711076594616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea34cd71554f84048e92bbff05fa154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlowTime
+  cooldown: 0
 --- !u!1 &6694536040780682248
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8058414124949245402}
   - component: {fileID: 2186682433964827906}
+  - component: {fileID: 400213129475409639}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -546,3 +548,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotate
   RotationSpeed: 400
+--- !u!114 &400213129475409639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010939986241759459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a8b5de96530cefd9a0737287610fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwordAttack
