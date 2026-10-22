@@ -4,6 +4,7 @@ public class WeaponHit : MonoBehaviour
 {
     Health playerHealth;
 
+
     void Start()
     {
         playerHealth = transform.parent.GetComponent<Health>();
