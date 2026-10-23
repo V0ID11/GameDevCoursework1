@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
     public GameObject left;
     public GameObject right;
 
+    public float round_length;
+
     public List<GameObject> spawned_enemies; 
 
     void Start() {
@@ -27,6 +29,9 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if (round_length <= 0){
+            Destroy(gameObject);
+        }
         spawned_enemies.RemoveAll(enemy => enemy == null);
         if (spawned_enemies.Count == 0) {
             
@@ -42,6 +47,7 @@ public class Spawner : MonoBehaviour
         }
 
         cooldown -= Time.deltaTime;
+        round_length -= Time.deltaTime;
     }
 
 
