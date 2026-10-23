@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 655190462969445835}
   - component: {fileID: 6667153156657396283}
   - component: {fileID: 20194273935371588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 486568262297856177}
   - component: {fileID: 6979615257680134922}
   - component: {fileID: 6385266071431126989}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8711960543289683160}
   - component: {fileID: 6353489542973365419}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Body_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 8058414124949245402}
   - component: {fileID: 970168099350056577}
   - component: {fileID: 3339736804029347673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

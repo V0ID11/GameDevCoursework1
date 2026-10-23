@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3799692378483406200}
   - component: {fileID: 4526380733780821085}
   - component: {fileID: 910057078385215186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pivot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3699309625759747827}
   - component: {fileID: 1855941264869013527}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

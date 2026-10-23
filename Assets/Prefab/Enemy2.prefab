@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31be171a72b531531b1bbb47d9200823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  totalHealth: 0
+  totalHealth: 5
   current_health: 0
 --- !u!1 &5655511762824522034
 GameObject:

@@ -20,7 +20,7 @@ public class Shoot : MonoBehaviour
     {
         if (mouseAction.triggered && (timeout <= 0)) {
             timeout = cooldown;
-            Debug.Log("here");
+
             
             Vector2 screenPos = Pointer.current.position.ReadValue();
             Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
