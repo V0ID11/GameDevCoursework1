@@ -3,15 +3,17 @@ using UnityEngine;
 public class BladeCollision : MonoBehaviour
 {
 
-    Rotate parent;
+    Rotate parent_rotation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        parent = gameObject.GetComponentInParent<Rotate>();
+        parent_rotation = gameObject.GetComponentInParent<Rotate>();
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        parent.RotationSpeed = -1 * parent.RotationSpeed;
+        if (collision.transform.IsChildOf(transform.parent)) return;
+
+        parent_rotation.RotationSpeed = -1 * parent_rotation.RotationSpeed;
     }
     
 }
