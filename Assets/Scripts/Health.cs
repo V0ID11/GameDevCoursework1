@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     void FixedUpdate()
     {
         if (i_frames_count >= 0){
-            i_frames_count -= Time.deltaTime;
+            i_frames_count -= Time.deltaTime; 
         }
     }
 
