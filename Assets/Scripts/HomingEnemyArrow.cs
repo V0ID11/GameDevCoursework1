@@ -21,6 +21,7 @@ public class HomingEnemyArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player != null){
         if (ttl <= 0) {
             Destroy(gameObject);
         }
@@ -34,5 +35,5 @@ public class HomingEnemyArrow : MonoBehaviour
         rb.linearVelocity = new Vector2(Mathf.Cos(angle) * speed * sideDirection, Mathf.Sin(angle) * speed * upDirection);
 
         ttl -= Time.deltaTime;
-    }
+    }}
 }

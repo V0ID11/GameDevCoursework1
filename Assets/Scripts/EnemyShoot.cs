@@ -20,6 +20,7 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player != null){
         if (timeout <= 0) {
             timeout = cooldown;
 
@@ -36,6 +37,6 @@ public class EnemyShoot : MonoBehaviour
         // Debug.Log(timeout);
         if (timeout > 0){timeout = timeout - Time.deltaTime;}
         
-    }
+    }}
 }
 

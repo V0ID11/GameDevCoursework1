@@ -13,6 +13,7 @@ public class EnemyBow : MonoBehaviour
 
     void Update()
     {
+        if (player != null){
         Vector3 playerPos = player.transform.position;
 
         Vector2 direction = playerPos - transform.position;
@@ -22,4 +23,5 @@ public class EnemyBow : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, RotationSpeed * Time.deltaTime);
     }
+}
 }
