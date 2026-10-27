@@ -31,7 +31,7 @@ public class HomingEnemyArrow : MonoBehaviour
 
         float angle = Mathf.Atan(Mathf.Abs(playerPos.y - this.transform.position.y) / Mathf.Abs(playerPos.x - this.transform.position.x));
 
-        rb.linearVelocity = new Vector2(Mathf.Cos(angle) * speed * sideDirection * Time.deltaTime, Mathf.Sin(angle) * speed * upDirection * Time.deltaTime);
+        rb.linearVelocity = new Vector2(Mathf.Cos(angle) * speed * sideDirection, Mathf.Sin(angle) * speed * upDirection);
 
         ttl -= Time.deltaTime;
     }
