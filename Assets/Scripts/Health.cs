@@ -1,5 +1,5 @@
 using System; 
-using System.Collections; // Required for Coroutines
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -29,11 +29,13 @@ public class Health : MonoBehaviour
         if (i_frames_count <= 0) 
         {
             current_health -= damage; 
-            Debug.Log(current_health);
 
             OnTakeDamage?.Invoke(current_health, totalHealth);
             
-            StartCoroutine(HitStopRoutine(0.1f));
+            if (current_health > 0)
+            {
+                StartCoroutine(HitStopRoutine(0.1f));
+            }
             
             i_frames_count = i_frames;
         }
@@ -43,6 +45,10 @@ public class Health : MonoBehaviour
             if (gameObject.CompareTag("Player")) 
             {
                 Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
             }
             
             Destroy(gameObject);
