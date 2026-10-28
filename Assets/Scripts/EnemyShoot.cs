@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class EnemyShoot : MonoBehaviour
 {
-    InputAction mouseAction;    
     public float cooldown;
     float timeout;
     public float arrowSpeed;
@@ -17,26 +16,29 @@ public class EnemyShoot : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (player != null){
-        if (timeout <= 0) {
-            timeout = cooldown;
+        if (player != null)
+        {
+            if (timeout <= 0) 
+            {
+                timeout = cooldown;
 
-            Vector3 playerPos = player.transform.position;
+                Vector2 playerPos = player.transform.position;
+                Vector2 myPos = transform.position;
+                Vector2 direction = (playerPos - myPos).normalized;
 
-            Vector2 direction = (playerPos - transform.position).normalized;
+                GameObject newArrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+                newArrow.GetComponent<ProjectileMovement>().velocity = direction * arrowSpeed;
 
-            GameObject newArrow = Instantiate(arrowPrefab, transform.position, transform.rotation);
-
-            newArrow.GetComponent<ProjectileMovement>().velocity = direction * arrowSpeed;
-
-            newArrow.transform.Rotate(0, 0, -45);
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                newArrow.transform.rotation = Quaternion.Euler(0, 0, angle - 45f);
+            }
+            
+            if (timeout > 0)
+            {
+                timeout -= Time.deltaTime;
+            }
         }
-        // Debug.Log(timeout);
-        if (timeout > 0){timeout = timeout - Time.deltaTime;}
-        
-    }}
+    }
 }
-
