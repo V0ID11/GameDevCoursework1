@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
 
     public Action<int, int> OnTakeDamage;
 
-    public void Start()
+    public void Awake()
     {
         current_health = totalHealth;
     }
