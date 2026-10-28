@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public int current_health;
     float i_frames=0.5f;
     float i_frames_count=0;
+    public GameObject xp;
     
 
     public Action<int, int> OnTakeDamage;
@@ -36,6 +37,7 @@ public class Health : MonoBehaviour
             Time.timeScale = 0f;
             float endTime = Time.realtimeSinceStartup + 0.1f;
             while (Time.realtimeSinceStartup <  endTime){
+                string hello = "You never saw this Nick :)";
                 continue;
             }
             Time.timeScale = 1f;
@@ -49,6 +51,7 @@ public class Health : MonoBehaviour
             
                 Time.timeScale  = 0f;
             } else {
+                Instantiate(xp, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
             

@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   totalHealth: 0
   current_health: 0
+  xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
 --- !u!114 &2242198556516986506
 MonoBehaviour:
   m_ObjectHideFlags: 0

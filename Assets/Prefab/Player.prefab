@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 1956463203398304029}
   - component: {fileID: 7422171407712814769}
   - component: {fileID: 559627858627116638}
+  - component: {fileID: 4574808569025834926}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -401,6 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   totalHealth: 10
   current_health: 0
+  xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
 --- !u!114 &7422171407712814769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +432,21 @@ MonoBehaviour:
   bowPivot: {fileID: 7371314491086062607}
   swordEnabled: 1
   cooldown: 5
+--- !u!114 &4574808569025834926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870359602123381552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f0e16503535a373ba1e152c01ac35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerXP
+  total_xp: 0
+  xp: 0
+  level: 0
 --- !u!1 &3212324001039266405
 GameObject:
   m_ObjectHideFlags: 0

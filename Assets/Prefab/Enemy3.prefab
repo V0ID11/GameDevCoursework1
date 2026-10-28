@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   totalHealth: 10
   current_health: 0
+  xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
 --- !u!1 &6694536040780682248
 GameObject:
   m_ObjectHideFlags: 0
