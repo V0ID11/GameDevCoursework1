@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class ChangeDirection : MonoBehaviour
 {
     InputAction mouseAction;    
-    float timeout;
+    public float timeout;
     public float cooldown;
     Bounce bounceScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

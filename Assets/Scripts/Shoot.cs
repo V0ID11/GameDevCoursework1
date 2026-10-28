@@ -5,7 +5,7 @@ public class Shoot : MonoBehaviour
 {
     InputAction mouseAction;    
     public float cooldown;
-    float timeout = 0;
+    public float timeout = 0;
     public float arrowSpeed;
     public GameObject arrowPrefab;
 
