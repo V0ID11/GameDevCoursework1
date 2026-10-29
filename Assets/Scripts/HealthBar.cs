@@ -27,4 +27,12 @@ public class HealthBar : MonoBehaviour
         float healthPercentage = (float)current_health / totalHealth;
         transform.localScale = new Vector3(scale * healthPercentage, 0.07f, 1f);
     }
+
+    void OnDestroy()
+    {
+        if (player != null)
+        {
+            player.OnTakeDamage -= updateHealthBar;
+        }
+    }
 }

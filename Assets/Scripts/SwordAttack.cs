@@ -5,7 +5,7 @@ public class SwordAttack : MonoBehaviour
 {
     InputAction swingAction;
     public float cooldown;
-    float timeout = 0;
+    public float timeout = 0;
     float swingTiming=0;
     public float duration;
     bool swinging = false;

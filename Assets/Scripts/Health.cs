@@ -1,4 +1,5 @@
-using System; // Required for Action
+using System; 
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -12,49 +13,54 @@ public class Health : MonoBehaviour
 
     public Action<int, int> OnTakeDamage;
 
-    public void Start()
+    public void Awake()
     {
         current_health = totalHealth;
     }
 
     void FixedUpdate()
     {
-        if (i_frames_count >= 0){
+        if (i_frames_count >= 0)
+        {
             i_frames_count -= Time.deltaTime; 
         }
     }
 
     public void SubtractHealth(int damage)
     {
-        if (i_frames_count <= 0) {
+        if (i_frames_count <= 0) 
+        {
             current_health -= damage; 
-            Debug.Log(current_health);
-            
 
             OnTakeDamage?.Invoke(current_health, totalHealth);
             
-            
-            Time.timeScale = 0f;
-            float endTime = Time.realtimeSinceStartup + 0.1f;
-            while (Time.realtimeSinceStartup <  endTime){
-                string hello = "You never saw this Nick :)";
-                continue;
+            if (current_health > 0)
+            {
+                StartCoroutine(HitStopRoutine(0.1f));
             }
-            Time.timeScale = 1f;
+            
             i_frames_count = i_frames;
         }
         
         if (current_health <= 0)
         {   
-            if (gameObject.tag == "Player") {
-                Destroy(gameObject);
-            
-                Time.timeScale  = 0f;
-            } else {
-                Instantiate(xp, transform.position, transform.rotation);
-                Destroy(gameObject);
+            if (gameObject.CompareTag("Player")) 
+            {
+                Time.timeScale = 0f;
             }
-            
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            Instantiate(xp, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator HitStopRoutine(float duration)
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(duration); 
+        Time.timeScale = 1f;
     }
 }

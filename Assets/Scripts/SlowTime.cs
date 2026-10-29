@@ -6,7 +6,7 @@ public class SlowTime : MonoBehaviour
 {
     InputAction SlowAction;
     public float cooldown;
-    float timeout = 0;
+    public float timeout = 0;
     float slowTiming=0;
     bool slowed = false;
 
