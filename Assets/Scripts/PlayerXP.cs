@@ -1,32 +1,42 @@
 using UnityEngine;
-
+using System; 
 
 public class PlayerXP : MonoBehaviour
 {
     public int total_xp;
     public int xp;
     public int level;
-    int for_next_level;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int for_next_level; 
+
+    public Action<int, int> OnXPChanged;
+
     void Start()
     {
         total_xp = 0;
-        xp = total_xp;
+        xp = 0; 
         level = 1;
-        for_next_level = 1;
+        
+        OnXPChanged?.Invoke(xp, for_next_level);
     }
 
-    void level_up(){
+    void level_up()
+    {
         xp = xp - for_next_level;
         for_next_level = for_next_level * 2;
         level += 1;
     }
 
-    public void AddXP(int incoming_xp){
+    public void AddXP(int incoming_xp)
+    {
         total_xp += incoming_xp;
         xp += incoming_xp;
-        if (xp >= for_next_level){
+        
+        while (xp >= for_next_level)
+        {
             level_up();
+            Debug.Log("level up");
         }
+
+        OnXPChanged?.Invoke(xp, for_next_level);
     }
 }

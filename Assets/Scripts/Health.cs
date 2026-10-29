@@ -9,6 +9,9 @@ public class Health : MonoBehaviour
     float i_frames=0.5f;
     float i_frames_count=0;
     public GameObject xp;
+    private SpriteRenderer spriteRenderer;
+    private Shader originalShader;
+    private Shader whiteShader;
     
 
     public Action<int, int> OnTakeDamage;
@@ -16,6 +19,28 @@ public class Health : MonoBehaviour
     public void Awake()
     {
         current_health = totalHealth;
+        
+        SpriteRenderer[] allRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer sr in allRenderers)
+        {
+            if (sr.gameObject.name == "Body_Sprite")
+            {
+                spriteRenderer = sr;
+                break;
+            }
+        }
+
+        if (spriteRenderer == null && allRenderers.Length > 0)
+        {
+            spriteRenderer = allRenderers[0];
+        }
+        
+        if (spriteRenderer != null)
+        {
+            originalShader = spriteRenderer.material.shader;
+            whiteShader = Shader.Find("GUI/Text Shader"); 
+        }
     }
 
     void FixedUpdate()
@@ -36,7 +61,7 @@ public class Health : MonoBehaviour
             
             if (current_health > 0)
             {
-                StartCoroutine(HitStopRoutine(0.1f));
+                StartCoroutine(HitStopRoutine(0.2f));
             }
             
             i_frames_count = i_frames;
@@ -60,7 +85,17 @@ public class Health : MonoBehaviour
     IEnumerator HitStopRoutine(float duration)
     {
         Time.timeScale = 0f;
+        if (spriteRenderer != null && whiteShader != null)
+        {
+            spriteRenderer.material.shader = whiteShader;
+        }
+
         yield return new WaitForSecondsRealtime(duration); 
+
+        if (spriteRenderer != null && originalShader != null)
+        {
+            spriteRenderer.material.shader = originalShader;
+        }
         Time.timeScale = 1f;
     }
 }
