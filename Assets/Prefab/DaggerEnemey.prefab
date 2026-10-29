@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 6320215713025905874}
+  - component: {fileID: -8794911423850970777}
   m_Layer: 7
   m_Name: DaggerEnemey
   m_TagString: Untagged
@@ -395,6 +396,19 @@ MonoBehaviour:
   totalHealth: 5
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+--- !u!114 &-8794911423850970777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
+  settings: {fileID: 11400000, guid: 4b8678416ba3b5b1982e677e8ccfe34f, type: 2}
 --- !u!1 &5655511762824522034
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +612,7 @@ GameObject:
   - component: {fileID: 7857908257635508475}
   - component: {fileID: 7919799644116320137}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

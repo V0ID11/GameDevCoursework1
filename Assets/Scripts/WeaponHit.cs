@@ -16,9 +16,10 @@ public class WeaponHit : MonoBehaviour
         if (collision.transform.IsChildOf(transform.parent)) return;
 
         // The thing we hit must actually have a Weapon on it
+        
         Weapon weapon = collision.GetComponent<Weapon>();
         if (weapon == null) return;
 
-        playerHealth.SubtractHealth(weapon.damage);
+        playerHealth.SubtractHealth(weapon.GetWeaponDamage());
     }
 }

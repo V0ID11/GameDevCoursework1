@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 6320215713025905874}
+  - component: {fileID: -324159279756097226}
   m_Layer: 7
   m_Name: HomingEnemy
   m_TagString: Untagged
@@ -300,6 +301,19 @@ MonoBehaviour:
   totalHealth: 5
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+--- !u!114 &-324159279756097226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
+  settings: {fileID: 11400000, guid: 9e7d7e5fc04083f549b9bde36671588f, type: 2}
 --- !u!1 &5425914113259668286
 GameObject:
   m_ObjectHideFlags: 0

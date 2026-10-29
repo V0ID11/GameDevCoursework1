@@ -11,19 +11,28 @@ public class SwordAttack : MonoBehaviour
     bool swinging = false;
     Rotate RotationScript;
     public float speedScaling;
+
+    SettingsManager settingsManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         swingAction = InputSystem.actions.FindAction("Shoot");
         RotationScript = gameObject.GetComponent<Rotate>();
+
+        if (transform.parent != null && transform.parent != null)
+            {
+                settingsManager = transform.parent.GetComponent<SettingsManager>();
+            }
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (swingAction.triggered && timeout <= 0) {
             RotationScript.RotationSpeed = RotationScript.RotationSpeed * speedScaling;
-            timeout = cooldown;
+            timeout = cooldown * settingsManager.settings.SwordAbilityCooldown;
+            // Debug.Log(timeout);
             swingTiming = duration;
             swinging = true;
             

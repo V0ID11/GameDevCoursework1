@@ -11,9 +11,9 @@ public class ProjectileMovement : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        rb.linearVelocity = velocity;
-    }
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //     rb.linearVelocity = velocity;
+    // }
 }

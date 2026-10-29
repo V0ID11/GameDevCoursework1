@@ -52,12 +52,12 @@ MonoBehaviour:
   - {fileID: 2839975450338596557, guid: fb90767166b2fd6cb87b39e230d7cca9, type: 3}
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
   rates:
-  - 0
-  - 0
-  - 0
-  - 0
   - 1
-  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   max_enemies: 5
   timeout: 10
   top: {fileID: 0}

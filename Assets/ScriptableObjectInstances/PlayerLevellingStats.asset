@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed982f387ff2c6199c41db386f7428a, type: 3}
+  m_Name: PlayerLevellingStats
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLevellingStats
+  SwordDamage: 4
+  WeaponSize: 1
+  SpinSpeed: 1
+  ExtraDaggerEnabled: 0
+  ExtraDaggerDamage: 2
+  ExtraDaggerSize: 1
+  SwordAbilityCooldown: 1
+  AimLineEnabled: 0
+  AimLineSize: 1
+  ArrowSpeed: 1
+  ArrowDamage: 3
+  ArrowShotCooldown: 0.5
+  ArrowPierce: 0
+  ArrowRicochet: 0
+  SwordSprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
+  DaggerSprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
+  BowSprite: {fileID: -5737821982321397918, guid: 3952596c097fe55499b05ad3b9223b1d, type: 3}
