@@ -12,6 +12,7 @@ public class BladeCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.transform.IsChildOf(transform.parent)) return;
+        if (collision.gameObject.tag == "Arrow") return;
 
         parent_rotation.RotationSpeed = -1 * parent_rotation.RotationSpeed;
     }

@@ -9,16 +9,26 @@ public class Shoot : MonoBehaviour
     public float arrowSpeed;
     public GameObject arrowPrefab;
 
+    SettingsManager settingsManager;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mouseAction = InputSystem.actions.FindAction("Shoot");
+
+        if (!CompareTag("Arrow"))
+        {
+            if (transform.parent != null && transform.parent != null)
+            {
+                settingsManager = transform.parent.GetComponent<SettingsManager>();
+            }
+        }
     }
 
     void Update()
     {
-        if (mouseAction.triggered && (timeout <= 0)) 
-        {
-            timeout = cooldown;
+        if (mouseAction.triggered && (timeout <= 0)) {
+            timeout = cooldown * settingsManager.settings.ArrowShotCooldown;
 
             Vector2 screenPos = Pointer.current.position.ReadValue();
             Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
@@ -26,11 +36,13 @@ public class Shoot : MonoBehaviour
             
             Vector2 direction = (worldPos - myPos).normalized;
 
-            GameObject newArrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-            newArrow.GetComponent<ProjectileMovement>().velocity = direction * arrowSpeed;
+            newArrow.GetComponent<ProjectileMovement>().velocity = direction * arrowSpeed * settingsManager.settings.ArrowSpeed;
 
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            newArrow.transform.rotation = Quaternion.Euler(0, 0, angle - 45f);
+            newArrow.transform.Rotate(0, 0, -45);
+            newArrow.GetComponent<Weapon>().SetWeaponDamage(settingsManager.settings.ArrowDamage);
+            newArrow.GetComponent<ArrowCollision>().pierce = settingsManager.settings.ArrowPierce;
+            newArrow.GetComponent<ArrowCollision>().ricochet = settingsManager.settings.ArrowRicochet;
+
         }
         
         if (timeout > 0)
