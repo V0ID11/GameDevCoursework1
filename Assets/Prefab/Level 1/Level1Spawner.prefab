@@ -45,19 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   enemies:
-  - {fileID: 2839975450338596557, guid: c2bd9d1a612b1bd42b3d4dbe486a0b38, type: 3}
-  - {fileID: 2839975450338596557, guid: 8231bca0f183c75e686f6e95aa6fbe1a, type: 3}
-  - {fileID: 2839975450338596557, guid: ae7d2fb76dd1c304bb542d3dd595831e, type: 3}
-  - {fileID: 2839975450338596557, guid: 5cb2d09404bb9bf46b4368be5e5db6da, type: 3}
-  - {fileID: 2839975450338596557, guid: fb90767166b2fd6cb87b39e230d7cca9, type: 3}
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
+  - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
+  - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
   rates:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 1
-  - 0
+  - 5
+  - 2
+  - 2
   max_enemies: 5
   timeout: 10
   top: {fileID: 0}
