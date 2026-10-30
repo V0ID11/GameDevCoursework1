@@ -76,9 +76,10 @@ public class Health : MonoBehaviour
             else
             {
                 Time.timeScale = 1f;
+                current_health = 0; 
+                StartCoroutine(DeathFadeRoutine(0.5f));
             }
-            Instantiate(xp, transform.position, transform.rotation);
-            Destroy(gameObject);
+            
         }
     }
 
@@ -97,5 +98,54 @@ public class Health : MonoBehaviour
             spriteRenderer.material.shader = originalShader;
         }
         Time.timeScale = 1f;
+    }
+
+    IEnumerator DeathFadeRoutine(float fadeDuration)
+    {
+        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
+        foreach (Collider2D col in colliders)
+        {
+            col.enabled = false;
+        }
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.simulated = false; 
+        }
+
+        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != this) 
+            {
+                script.enabled = false;
+            }
+        }
+
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            
+            foreach (SpriteRenderer sr in renderers)
+            {
+                if (sr != null)
+                {
+                    Color c = sr.color;
+                    c.a = alpha;
+                    sr.color = c;
+                }
+            }
+            
+            yield return null; 
+        }
+
+        Instantiate(xp, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

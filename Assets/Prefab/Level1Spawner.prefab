@@ -54,9 +54,11 @@ MonoBehaviour:
   - 2
   max_enemies: 5
   timeout: 10
+  cooldown: 0
   top: {fileID: 0}
   bottom: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}
   round_length: 0
+  warningPrefab: {fileID: 0}
   spawned_enemies: []
