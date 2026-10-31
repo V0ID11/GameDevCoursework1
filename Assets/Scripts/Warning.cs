@@ -5,10 +5,10 @@ public class Warning : MonoBehaviour
     public float warningDuration = 1f; // How long the warning stays on screen
     
     private GameObject plannedEnemyPrefab;
-    private Spawner parentSpawner;
+    private OrchSpawner parentSpawner;
     private float timer;
 
-    public void Setup(GameObject enemyToSpawn, Spawner spawner)
+    public void Setup(GameObject enemyToSpawn, OrchSpawner spawner)
     {
         plannedEnemyPrefab = enemyToSpawn;
         parentSpawner = spawner;

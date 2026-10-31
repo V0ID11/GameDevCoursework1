@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
                         
                         GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
 
-                        warningObj.GetComponent<Warning>().Setup(enemies[j], this);
+                        //warningObj.GetComponent<Warning>().Setup(enemies[j], this);
 
                         spawned_enemies.Add(warningObj);
 

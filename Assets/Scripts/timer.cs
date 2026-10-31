@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour
 {
 
-    public Spawner spawner;
+    public OrchSpawner spawner;
     private TextMeshProUGUI myText;
 
     void Start()
@@ -16,8 +16,8 @@ public class timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int minutes = (int) spawner.round_length / 60;
-        int seconds = (int) spawner.round_length - (minutes * 60);
+        int minutes = (int) spawner.round_timer / 60;
+        int seconds = (int) spawner.round_timer - (minutes * 60);
         string timerText = minutes.ToString("00") + ":" + seconds.ToString("00");
 
         myText.text = timerText;

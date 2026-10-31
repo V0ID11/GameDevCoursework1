@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7603332286474137073}
   - component: {fileID: 542640056600775977}
   m_Layer: 0
-  m_Name: Level1Spawner
+  m_Name: OrchestratedSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

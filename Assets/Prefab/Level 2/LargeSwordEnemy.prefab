@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 958304577100329641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.926009, w: 0.37750146}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 1.037, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8058414124949245402}
@@ -153,11 +153,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.38422155, y: 0.038195536}
-      - {x: -0.36086518, y: 0.4892537}
-      - {x: -0.46566692, y: 0.30295244}
-      - {x: -0.08242176, y: -0.4227496}
-      - {x: 0.2028082, y: -0.26632228}
+    - - {x: 0.3882466, y: 0.07232555}
+      - {x: -0.41148227, y: 0.51802105}
+      - {x: -0.4905568, y: 0.28651273}
+      - {x: -0.102174826, y: -0.39936623}
+      - {x: 0.2777953, y: -0.32405308}
   m_UseDelaunayMesh: 1
 --- !u!114 &4989512897819908399
 MonoBehaviour:
@@ -277,9 +277,9 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 6320215713025905874}
-  - component: {fileID: -8794911423850970777}
+  - component: {fileID: 6504428340216386316}
   m_Layer: 7
-  m_Name: DaggerEnemey
+  m_Name: LargeSwordEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,10 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31be171a72b531531b1bbb47d9200823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  totalHealth: 5
+  totalHealth: 25
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
---- !u!114 &-8794911423850970777
+--- !u!114 &6504428340216386316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
-  settings: {fileID: 11400000, guid: 4b8678416ba3b5b1982e677e8ccfe34f, type: 2}
+  settings: {fileID: 11400000, guid: e96ff180e0ad7a3f9a7d56f9704e74f2, type: 2}
 --- !u!1 &5655511762824522034
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,179 +598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab10b8f9699b3d778b89d75efeeb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHit
---- !u!1 &7748074419002562781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4213323188663294902}
-  - component: {fileID: 3345231907231446290}
-  - component: {fileID: 6776442333322710714}
-  - component: {fileID: 7857908257635508475}
-  - component: {fileID: 7919799644116320137}
-  m_Layer: 0
-  m_Name: Dagger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4213323188663294902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748074419002562781}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.92600906, y: -0.37750146, z: 0, w: 0}
-  m_LocalPosition: {x: -0.75, y: 0, z: 0}
-  m_LocalScale: {x: 0.6000001, y: 0.6000001, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8058414124949245402}
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: -135.642}
---- !u!212 &3345231907231446290
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748074419002562781}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
---- !u!114 &6776442333322710714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748074419002562781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a347a80f6247fd5dae0d764e226ef29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BladeCollision
---- !u!60 &7857908257635508475
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748074419002562781}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 1216
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.40814006, y: 0.106339455}
-      - {x: 0.29643282, y: 0.10741402}
-      - {x: -0.39719248, y: 0.4271415}
-      - {x: -0.4248377, y: 0.2386195}
-      - {x: -0.13808785, y: -0.41103232}
-      - {x: 0.2028082, y: -0.26632228}
-  m_UseDelaunayMesh: 1
---- !u!114 &7919799644116320137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7748074419002562781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  damage: 2
 --- !u!1 &7872204614250350932
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +679,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1736281663721397587, guid: b48131aafaca7de4e85c52d0bbfbc9cd, type: 3}
+  m_Sprite: {fileID: 6858167808566381812, guid: 0c335e02d311b314d945bd6d16235b19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -894,7 +721,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 655190462969445835}
-  - {fileID: 4213323188663294902}
   m_Father: {fileID: 5948878520615162886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2186682433964827906
@@ -909,4 +735,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  RotationSpeed: 400
+  RotationSpeed: 150
