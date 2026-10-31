@@ -10,6 +10,8 @@ public class PlayerXP : MonoBehaviour
 
     public Action<int, int> OnXPChanged;
 
+    public UpgradeManager upgradeManager;
+
     void Start()
     {
         total_xp = 0;
@@ -20,11 +22,21 @@ public class PlayerXP : MonoBehaviour
     }
 
     void level_up()
+{
+    xp = xp - for_next_level;
+    for_next_level = for_next_level * 2;
+    level += 1;
+
+    // Trigger the upgrade selection screen
+    if (upgradeManager != null)
     {
-        xp = xp - for_next_level;
-        for_next_level = for_next_level * 2;
-        level += 1;
+        upgradeManager.TriggerLevelUp();
     }
+    else
+    {
+        Debug.LogWarning("UpgradeManager reference not set on PlayerXP!");
+    }
+}
 
     public void AddXP(int incoming_xp)
     {

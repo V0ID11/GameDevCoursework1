@@ -16,14 +16,14 @@ MonoBehaviour:
   WeaponSize: 1
   SpinSpeed: 1
   ExtraDaggerEnabled: 0
-  ExtraDaggerDamage: 2
+  ExtraDaggerDamage: 4
   ExtraDaggerSize: 1
   SwordAbilityCooldown: 1
   AimLineEnabled: 0
   AimLineSize: 1
   ArrowSpeed: 1
   ArrowDamage: 3
-  ArrowShotCooldown: 0.5
+  ArrowShotCooldown: 1
   ArrowPierce: 0
   ArrowRicochet: 0
   SwordSprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}

@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    public PlayerLevellingStats settings;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public PlayerLevellingStats masterSettingsTemplate; 
+    [HideInInspector] public PlayerLevellingStats settings; 
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (masterSettingsTemplate != null)
+        {
+            
+            settings = Instantiate(masterSettingsTemplate);
+        }
+        else
+        {
+            Debug.LogError("Master Settings Template is missing!");
+        }
     }
 }

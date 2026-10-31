@@ -56,13 +56,13 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 1
   - 0
+  - 1
   max_enemies: 5
   timeout: 10
   top: {fileID: 0}
   bottom: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}
-  round_length: 0
+  round_length: 60
   spawned_enemies: []

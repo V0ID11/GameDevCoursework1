@@ -15,7 +15,7 @@ public class UpdatePlayerWeapons : MonoBehaviour
          UpdateWeapons();
     }
 
-    void UpdateWeapons()
+    public void UpdateWeapons()
     {
         if (settingsManager == null || settingsManager.settings == null)
         {

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3183002965214905766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7251335768559755409}
+  - component: {fileID: 1627489563029794083}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7251335768559755409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183002965214905766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.56784, y: 1.93359, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627489563029794083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183002965214905766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff8e62c16ca2eb6fb183efb123e60a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
+  settingsManager: {fileID: 0}
+  upgradePanel: {fileID: 0}
+  cardsParent: {fileID: 0}
+  upgradeCardPrefab: {fileID: 9179941489474246384, guid: 8f428d5143774b73f9c0d7a4fdf18078, type: 3}
+  allSwordUpgrades:
+  - {fileID: 11400000, guid: 4813358df671cabaf9dd8b71e4df10c1, type: 2}
+  - {fileID: 11400000, guid: 0545d68dfcd6efe7b8f4838c78e51a01, type: 2}
+  - {fileID: 11400000, guid: 5b09c2a49cfda5e978c09641ed95df76, type: 2}
+  - {fileID: 11400000, guid: 2406f9773e2440e3eaf589860ececa8f, type: 2}
+  - {fileID: 11400000, guid: 6bfd06237425255e8a5985ebb158f2b0, type: 2}
+  - {fileID: 11400000, guid: ca78ce3b24c20b46a8402479c1f313be, type: 2}
+  - {fileID: 11400000, guid: b7e23e1333ac9c1f0b831260c7977d4b, type: 2}
+  - {fileID: 11400000, guid: 31fd5a3033da6c2c4b4d5d74a3ffba4f, type: 2}
+  - {fileID: 11400000, guid: 3796821006c565c41ab43d82884602c1, type: 2}
+  allBowUpgrades:
+  - {fileID: 11400000, guid: 97840002c9b1eb11b8f5b389aa62d84f, type: 2}
+  - {fileID: 11400000, guid: 9a860df48a3d9ccb19702dbfa8808e03, type: 2}
+  - {fileID: 11400000, guid: 58776629530d584ef82307584a0e4ba0, type: 2}
+  - {fileID: 11400000, guid: 8943bcd1297d181e8a062f0c0ff1d3df, type: 2}
+  - {fileID: 11400000, guid: 3252440caa7dd80248f0cd7c7cb81545, type: 2}
+  - {fileID: 11400000, guid: 3cd0432ae82ace24ba6b24ae195fe112, type: 2}
+  - {fileID: 11400000, guid: 8275e6b201b0cd7e99fc2f63c5103dfa, type: 2}
+  - {fileID: 11400000, guid: d9bd9908cec9b2727828f791903dec73, type: 2}
+  - {fileID: 11400000, guid: 18eb94d03a56f6e37a94da49aa3b539b, type: 2}
+  allPassiveUpgrades:
+  - {fileID: 11400000, guid: 949730f65ce6fcd78804c2f273d0d03d, type: 2}
+  - {fileID: 11400000, guid: 01b42b4d138d49632af9244b3b89782a, type: 2}
+  - {fileID: 11400000, guid: efc27408c4006ec38ab1cdc31d0d5eed, type: 2}
+  - {fileID: 11400000, guid: 658bcab40292cf2b19e2bc31ae7d48b4, type: 2}
+  - {fileID: 11400000, guid: 3839ab38ccce44119a59b6926d3f167f, type: 2}
+  - {fileID: 11400000, guid: ad60b3d107c7739acb2d6dac679b4666, type: 2}
