@@ -53,6 +53,8 @@ public class EnemyShoot : MonoBehaviour
             newArrow.GetComponent<ArrowCollision>().pierce = settingsManager.settings.ArrowPierce;
             newArrow.GetComponent<ArrowCollision>().ricochet = settingsManager.settings.ArrowRicochet;
 
+            AudioManager.instance.PlaySFX(SoundType.Arrow);
+
         }
         // Debug.Log(timeout);
         if (timeout > 0){timeout = timeout - Time.deltaTime;}

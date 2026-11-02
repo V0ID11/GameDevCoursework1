@@ -22,21 +22,22 @@ public class PlayerXP : MonoBehaviour
     }
 
     void level_up()
-{
-    xp = xp - for_next_level;
-    for_next_level = for_next_level * 2;
-    level += 1;
+    {
+        xp = xp - for_next_level;
+        for_next_level = for_next_level * 2;
+        level += 1;
+        AudioManager.instance.PlaySFX(SoundType.LevelUp);
 
-    // Trigger the upgrade selection screen
-    if (upgradeManager != null)
-    {
-        upgradeManager.TriggerLevelUp();
+        // Trigger the upgrade selection screen
+        if (upgradeManager != null)
+        {
+            upgradeManager.TriggerLevelUp();
+        }
+        else
+        {
+            Debug.LogWarning("UpgradeManager reference not set on PlayerXP!");
+        }
     }
-    else
-    {
-        Debug.LogWarning("UpgradeManager reference not set on PlayerXP!");
-    }
-}
 
     public void AddXP(int incoming_xp)
     {

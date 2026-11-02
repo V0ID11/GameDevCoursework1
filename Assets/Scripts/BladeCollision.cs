@@ -14,6 +14,7 @@ public class BladeCollision : MonoBehaviour
         if (collision.transform.IsChildOf(transform.parent)) return;
         if (collision.gameObject.tag == "Arrow") return;
 
+        AudioManager.instance.PlaySFX(SoundType.Parry);
         parent_rotation.RotationSpeed = -1 * parent_rotation.RotationSpeed;
     }
     

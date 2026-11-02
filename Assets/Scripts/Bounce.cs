@@ -12,6 +12,9 @@ public class Bounce : MonoBehaviour
 
     SettingsManager playerStats;
 
+    private float lastBounceSoundTime = 0f;
+    private float bounceSoundCooldown = 0.1f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -79,9 +82,23 @@ public class Bounce : MonoBehaviour
             Mathf.Cos(angle) * currentSpeed * sideDirection * playerStats.settings.PlayerSpeed, 
             Mathf.Sin(angle) * currentSpeed * upDirection  * playerStats.settings.PlayerSpeed
         );
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            if (Time.time >= lastBounceSoundTime + bounceSoundCooldown)
+            {
+                AudioManager.instance.PlaySFX(SoundType.Bounce);
+                lastBounceSoundTime = Time.time;
+            }
+        }
     }
 
     public void updateDirection(Vector2 mouseLocation){
+
         float angle = Mathf.Atan(Mathf.Abs(mouseLocation.y - transform.position.y) / (Mathf.Abs(mouseLocation.x - transform.position.x)));
 
 

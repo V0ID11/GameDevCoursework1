@@ -41,6 +41,7 @@ public class ArrowCollision : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
         {
+            AudioManager.instance.PlaySFX(SoundType.Bounce);
             if (ricochet > 0)
             {
                 ricochet--;

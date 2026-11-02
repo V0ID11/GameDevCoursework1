@@ -27,6 +27,7 @@ public class UpgradeCardUI : MonoBehaviour
 
     private void OnClickChoice()
     {
+        AudioManager.instance.PlaySFX(SoundType.UpgradeGet);
         upgradeManager.SelectUpgrade(assignedUpgrade);
     }
 }

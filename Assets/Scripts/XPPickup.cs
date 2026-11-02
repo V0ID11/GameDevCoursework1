@@ -16,6 +16,7 @@ public class XPPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         player_xp_component.AddXP(total_xp);
+        AudioManager.instance.PlaySFX(SoundType.XP);
         Destroy(this.transform.parent.gameObject);
     }
 }

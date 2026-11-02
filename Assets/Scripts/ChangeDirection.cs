@@ -25,6 +25,7 @@ public class ChangeDirection : MonoBehaviour
             Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
             bounceScript.updateDirection(worldPos);
             timeout = cooldown * playerStats.settings.DashAbilityCooldown;
+            AudioManager.instance.PlaySFX(SoundType.Dash);
         }
         // Debug.Log(timeout);
         if (timeout > 0){timeout = timeout - Time.deltaTime;}

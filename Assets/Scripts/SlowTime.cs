@@ -26,7 +26,7 @@ public class SlowTime : MonoBehaviour
             timeout = cooldown * playerStats.settings.FocusAbilityCooldown;
             slowTiming = 1.5f;
             slowed = true;
-            
+            AudioManager.instance.PlaySFX(SoundType.Slow);
         }
         ;
         if (timeout > 0 && slowTiming <= 0) {

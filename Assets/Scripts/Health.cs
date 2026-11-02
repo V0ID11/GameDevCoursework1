@@ -67,6 +67,8 @@ public class Health : MonoBehaviour
             playerStats.settings.current_health -= (int) (damage * playerStats.settings.DamageReductionRatio); 
 
             OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
+
+            AudioManager.instance.PlaySFX(SoundType.SwordHit);
             
             if (playerStats.settings.current_health > 0)
             {
@@ -111,6 +113,8 @@ public class Health : MonoBehaviour
 
     IEnumerator DeathFadeRoutine(float fadeDuration)
     {
+        AudioManager.instance.PlaySFX(SoundType.Kill);
+
         Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
         foreach (Collider2D col in colliders)
         {

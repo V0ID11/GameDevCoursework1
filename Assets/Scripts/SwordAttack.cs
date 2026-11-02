@@ -35,7 +35,7 @@ public class SwordAttack : MonoBehaviour
             // Debug.Log(timeout);
             swingTiming = duration;
             swinging = true;
-            
+            AudioManager.instance.PlaySFX(SoundType.SwordAttack);
         }
         ;
         if (timeout > 0 && swingTiming <= 0) {
