@@ -52,5 +52,13 @@ public class UpdatePlayerWeapons : MonoBehaviour
         }
 
         // Aim Line Visuals (Add logic here if needed)
+        if (aimLine != null){
+            if (settingsManager.settings.AimLineEnabled){
+                aimLine.SetActive(true);
+                LineRenderer line = aimLine.GetComponent<LineRenderer>();
+                line.startWidth = line.startWidth * settingsManager.settings.AimLineSize;
+                line.endWidth = line.endWidth * settingsManager.settings.AimLineSize;
+            }
+        }
     }
 }

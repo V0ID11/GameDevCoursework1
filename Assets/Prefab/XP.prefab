@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 135211123210002649}
   - component: {fileID: 1008480654791887459}
   - component: {fileID: 8409460091003996866}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: XPDot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 1929243832531736429}
   - component: {fileID: 7480417358874782215}
   - component: {fileID: 6728764552498735819}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: XP
   m_TagString: Untagged
   m_Icon: {fileID: 0}

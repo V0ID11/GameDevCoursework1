@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ArrowCollision : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class ArrowCollision : MonoBehaviour
 
     Rigidbody2D rb;
     Vector2 preStepVelocity;
+    
+    // Tracks enemies already hit by this arrow to prevent multiple triggers from the same body
+    private HashSet<Collider2D> hitEnemies = new HashSet<Collider2D>();
 
     void Awake()
     {
@@ -15,7 +19,6 @@ public class ArrowCollision : MonoBehaviour
 
     void FixedUpdate()
     {
-        
         preStepVelocity = rb.linearVelocity;
 
         if (rb.linearVelocity.sqrMagnitude > 0.01f)
@@ -25,6 +28,7 @@ public class ArrowCollision : MonoBehaviour
         }
     }
 
+    // Handles solid, non-trigger objects (like Walls)
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Contains("Sword") ||
@@ -47,15 +51,33 @@ public class ArrowCollision : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else
+    }
+
+    // Handles trigger objects (like EnemyBody)
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Contains("Sword") ||
+            collision.gameObject.name.Contains("Dagger") ||
+            collision.gameObject.CompareTag("Arrow"))
         {
+            Destroy(gameObject);
+            return;
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyBody"))
+        {
+            // Ensure we don't double-count the same trigger collider in a single pass
+            if (hitEnemies.Contains(collision)) return;
+            hitEnemies.Add(collision);
+
+            Debug.Log("Here");
             if (pierce > 0)
             {
                 pierce--;
                 
+                // Keep the original momentum/velocity
                 rb.linearVelocity = preStepVelocity;
                 SyncAfterBounce();
-                Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
             }
             else
             {
@@ -68,7 +90,6 @@ public class ArrowCollision : MonoBehaviour
     {
         Vector2 v = rb.linearVelocity;
 
-        // Keep ProjectileMovement's copy in sync if it stores one
         var movement = GetComponent<ProjectileMovement>();
         if (movement != null) movement.velocity = v;
 
