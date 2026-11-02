@@ -24,7 +24,7 @@ public class HealthBar : MonoBehaviour
     
     public void updateHealthBar(int current_health, int totalHealth)
     {
-        float healthPercentage = (float)current_health / totalHealth;
+        float healthPercentage = Mathf.Clamp01((float)current_health / totalHealth);
         transform.localScale = new Vector3(scale * healthPercentage, 0.07f, 1f);
     }
 

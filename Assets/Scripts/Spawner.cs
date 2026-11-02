@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public int max_enemies;
     public float timeout;
     float sum_of_rates = 0;
-    float cooldown;
+    public float cooldown;
 
     public GameObject top;
     public GameObject bottom;
@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     public GameObject right;
 
     public float round_length;
+    public GameObject warningPrefab;
 
     public List<GameObject> spawned_enemies; 
 
@@ -61,7 +62,14 @@ public class Spawner : MonoBehaviour
                     if (spawn_chance < track) {
                         Vector2 spawn_pos = new Vector2(Random.Range(left.transform.position.x + 0.5f, right.transform.position.x - 0.5f), 
                                                         Random.Range(bottom.transform.position.y +0.5f, top.transform.position.y - 0.5f));
-                        spawned_enemies.Add(Instantiate(enemies[j], spawn_pos, Quaternion.identity));
+                        
+                        
+                        GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
+
+                        //warningObj.GetComponent<Warning>().Setup(enemies[j], this);
+
+                        spawned_enemies.Add(warningObj);
+
                         break;
                     }
                 }
