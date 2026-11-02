@@ -24,6 +24,18 @@ public class PlayerLevellingStats : ScriptableObject
     public int ArrowPierce;
     public int ArrowRicochet;
 
+    public float PlayerSpeed;
+    public float DamageReductionRatio;
+    public float DashAbilityCooldown;
+    public float FocusAbilityCooldown;
+    public int total_health;
+    public int current_health;
+
+    public bool shotCooldownReduction;
+    public bool SwordAbilityCooldownReduction;
+
+    
+
     public Sprite SwordSprite;
     public Sprite DaggerSprite;
     public Sprite BowSprite;

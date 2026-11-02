@@ -26,6 +26,14 @@ MonoBehaviour:
   ArrowShotCooldown: 1
   ArrowPierce: 0
   ArrowRicochet: 0
+  PlayerSpeed: 1
+  DamageReductionRatio: 1
+  DashAbilityCooldown: 1
+  FocusAbilityCooldown: 1
+  total_health: 100
+  current_health: 100
+  shotCooldownReduction: 0
+  SwordAbilityCooldownReduction: 0
   SwordSprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
   DaggerSprite: {fileID: -3337038689812066966, guid: 76ebb84ebc9dc4646819bcd1e19cc9c6, type: 3}
   BowSprite: {fileID: -5737821982321397918, guid: 3952596c097fe55499b05ad3b9223b1d, type: 3}

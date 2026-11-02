@@ -15,8 +15,16 @@ MonoBehaviour:
   category: 2
   pathID: 9
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 19
   upgradeName: Potion of Vitality
-  description: 
+  description: Increase maximum health
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 18
+    modifyMode: 1
+    value: 1.5
+  - targetStat: 19
+    modifyMode: 1
+    value: 1.5
+  newSprite: {fileID: 0}

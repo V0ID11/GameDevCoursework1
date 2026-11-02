@@ -15,8 +15,15 @@ MonoBehaviour:
   category: 2
   pathID: 8
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 18
   upgradeName: Potion of Haste
-  description: 
+  description: 'Decrease dash cooldown
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 16
+    modifyMode: 1
+    value: 0.8
+  newSprite: {fileID: 0}

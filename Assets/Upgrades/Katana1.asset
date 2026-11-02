@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 0
   pathID: 1
   tier: 1
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 9
   upgradeName: Katana Tier 1
-  description: 
+  description: Increase passive spin speed
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 2
+    modifyMode: 1
+    value: 1.5
+  newSprite: {fileID: 0}

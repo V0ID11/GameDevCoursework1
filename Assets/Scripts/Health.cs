@@ -16,9 +16,18 @@ public class Health : MonoBehaviour
 
     public Action<int, int> OnTakeDamage;
 
+    SettingsManager playerStats;
+    public void Start(){
+        playerStats = GetComponent<SettingsManager>();
+        current_health = playerStats.settings.current_health;
+        totalHealth=playerStats.settings.total_health;
+        OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
+
+    }
+
     public void Awake()
     {
-        current_health = totalHealth;
+
         
         SpriteRenderer[] allRenderers = GetComponentsInChildren<SpriteRenderer>();
 
@@ -55,11 +64,11 @@ public class Health : MonoBehaviour
     {
         if (i_frames_count <= 0) 
         {
-            current_health -= damage; 
+            playerStats.settings.current_health -= (int) (damage * playerStats.settings.DamageReductionRatio); 
 
-            OnTakeDamage?.Invoke(current_health, totalHealth);
+            OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
             
-            if (current_health > 0)
+            if (playerStats.settings.current_health > 0)
             {
                 StartCoroutine(HitStopRoutine(0.2f));
             }
@@ -67,7 +76,7 @@ public class Health : MonoBehaviour
             i_frames_count = i_frames;
         }
         
-        if (current_health <= 0)
+        if (playerStats.settings.current_health <= 0)
         {   
             if (gameObject.CompareTag("Player")) 
             {

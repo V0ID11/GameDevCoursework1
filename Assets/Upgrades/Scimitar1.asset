@@ -15,17 +15,16 @@ MonoBehaviour:
   category: 0
   pathID: 2
   tier: 1
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 20
   upgradeName: Scimitar Tier 1
-  description: 
+  description: Gain small secondary dagger
   icon: {fileID: 0}
   modifiers:
   - targetStat: 3
     modifyMode: 2
     value: 1
-  - targetStat: 5
+  - targetStat: 8
     modifyMode: 1
-    value: 0.5
-  - targetStat: 4
-    modifyMode: 0
-    value: 1
+    value: 0.8
+  newSprite: {fileID: 0}

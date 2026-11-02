@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
-  masterSettingsTemplate: {fileID: 0}
+  masterSettingsTemplate: {fileID: 11400000, guid: e96ff180e0ad7a3f9a7d56f9704e74f2, type: 2}
   settings: {fileID: 11400000, guid: e96ff180e0ad7a3f9a7d56f9704e74f2, type: 2}
 --- !u!1 &5655511762824522034
 GameObject:

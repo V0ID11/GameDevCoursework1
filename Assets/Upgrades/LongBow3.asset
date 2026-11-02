@@ -15,8 +15,18 @@ MonoBehaviour:
   category: 1
   pathID: 3
   tier: 3
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 14
   upgradeName: Long Bow Tier 3
-  description: 
+  description: 'Increase arrow speed and maximize aim line
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 9
+    modifyMode: 1
+    value: 1.5
+  - targetStat: 8
+    modifyMode: 1
+    value: 1.2
+  newSprite: {fileID: 0}

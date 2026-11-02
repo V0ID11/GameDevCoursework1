@@ -15,8 +15,19 @@ MonoBehaviour:
   category: 2
   pathID: 11
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 23
   upgradeName: Whetstone
-  description: 
+  description: Increase damage
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 0
+    modifyMode: 1
+    value: 1.5
+  - targetStat: 4
+    modifyMode: 1
+    value: 1.5
+  - targetStat: 10
+    modifyMode: 1
+    value: 1.5
+  newSprite: {fileID: 0}

@@ -16,7 +16,8 @@ public class UpgradeInformation : ScriptableObject
     [Header("Bloons Branching Rules")]
     public UpgradeCategory category;
     public int pathID;     
-    public int tier;       
+    public int tier;   
+    public int maxTier;    
 
     [Header("UI Info")]
     public string upgradeID;
@@ -26,6 +27,8 @@ public class UpgradeInformation : ScriptableObject
 
     [Header("Effects")]
     public StatModifier[] modifiers;
+
+    public Sprite newSprite;
 }
 
 public enum StatType
@@ -43,7 +46,15 @@ public enum StatType
     ArrowDamage,
     ArrowShotCooldown,
     ArrowPierce,
-    ArrowRicochet
+    ArrowRicochet,
+    PlayerSpeed,
+    DamageReductionRatio,
+    DashAbilityCooldown,
+    FocusAbilityCooldown,
+    total_health,
+    current_health,
+    shotCooldownReduction,
+    SwordAbilityCooldownReduction
 }
 
 public enum ModifyMode

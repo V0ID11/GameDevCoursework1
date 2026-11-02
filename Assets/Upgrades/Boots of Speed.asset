@@ -15,8 +15,15 @@ MonoBehaviour:
   category: 2
   pathID: 10
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 0
   upgradeName: Boots of Speed
-  description: 
+  description: 'Increase move speed
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 14
+    modifyMode: 1
+    value: 2
+  newSprite: {fileID: 0}

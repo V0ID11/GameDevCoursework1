@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 2
   pathID: 7
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 8
   upgradeName: Heavy Armour
-  description: 
+  description: Decrease damage taken
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 15
+    modifyMode: 1
+    value: 0.9
+  newSprite: {fileID: 0}

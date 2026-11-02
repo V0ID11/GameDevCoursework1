@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 1
   pathID: 4
   tier: 1
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 1
   upgradeName: Crossbow Tier 1
-  description: 
+  description: Increase Arrow Damage
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 10
+    modifyMode: 0
+    value: 3
+  newSprite: {fileID: 0}

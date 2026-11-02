@@ -15,8 +15,15 @@ MonoBehaviour:
   category: 2
   pathID: 6
   tier: 1
-  upgradeID: 
+  maxTier: 0
+  upgradeID: 4
   upgradeName: Enchanted Stopwatch
-  description: 
+  description: 'Decrease focus cooldown
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 17
+    modifyMode: 1
+    value: 0.8
+  newSprite: {fileID: 0}

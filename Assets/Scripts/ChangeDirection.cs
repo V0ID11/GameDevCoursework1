@@ -7,9 +7,12 @@ public class ChangeDirection : MonoBehaviour
     public float timeout;
     public float cooldown;
     Bounce bounceScript;
+
+    SettingsManager playerStats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerStats = GetComponent<SettingsManager>();
         mouseAction = InputSystem.actions.FindAction("Attack");
         bounceScript = GetComponent<Bounce>();
     }
@@ -21,7 +24,7 @@ public class ChangeDirection : MonoBehaviour
             Vector2 screenPos = Pointer.current.position.ReadValue();
             Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
             bounceScript.updateDirection(worldPos);
-            timeout = cooldown;
+            timeout = cooldown * playerStats.settings.DashAbilityCooldown;
         }
         // Debug.Log(timeout);
         if (timeout > 0){timeout = timeout - Time.deltaTime;}

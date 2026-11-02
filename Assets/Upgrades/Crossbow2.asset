@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 1
   pathID: 4
   tier: 2
-  upgradeID: Crossbow Tier 2
-  upgradeName: 
-  description: 
+  maxTier: 3
+  upgradeID: 2
+  upgradeName: Crossbow Tier 2
+  description: Decrease shot cooldown
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 11
+    modifyMode: 1
+    value: 0.5
+  newSprite: {fileID: 0}

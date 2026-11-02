@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 4422499192200473564}
   - component: {fileID: 2122462708067913407}
   - component: {fileID: 8043448823349386444}
+  - component: {fileID: -8558981092487335177}
   m_Layer: 7
   m_Name: Spider
   m_TagString: Untagged
@@ -331,6 +332,20 @@ MonoBehaviour:
   crawlSpeed: 3
   minCrawlTime: 0.5
   maxCrawlTime: 2
+--- !u!114 &-8558981092487335177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
+  masterSettingsTemplate: {fileID: 11400000, guid: 1b76babb309e0d83cb8f0860ca97d927, type: 2}
+  settings: {fileID: 0}
 --- !u!1 &6694536040780682248
 GameObject:
   m_ObjectHideFlags: 0

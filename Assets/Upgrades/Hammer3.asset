@@ -15,8 +15,21 @@ MonoBehaviour:
   category: 0
   pathID: 0
   tier: 3
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 7
   upgradeName: Hammer Tier 3
-  description: 
+  description: 'Decrease passive spin speed, increase damage and size
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 2
+    modifyMode: 1
+    value: 0.5
+  - targetStat: 0
+    modifyMode: 1
+    value: 1.5
+  - targetStat: 1
+    modifyMode: 1
+    value: 2
+  newSprite: {fileID: 0}

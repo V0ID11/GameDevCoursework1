@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 1
   pathID: 3
   tier: 2
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 13
   upgradeName: Long Bow Tier 2
-  description: 
+  description: Increase aim line size
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 8
+    modifyMode: 1
+    value: 1.2
+  newSprite: {fileID: 0}

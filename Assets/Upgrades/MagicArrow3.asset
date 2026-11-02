@@ -15,8 +15,18 @@ MonoBehaviour:
   category: 1
   pathID: 5
   tier: 3
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 17
   upgradeName: Homing Tier 3
-  description: 
+  description: 'Arrows ricochet and pierce twice
+
+'
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 12
+    modifyMode: 0
+    value: 1
+  - targetStat: 13
+    modifyMode: 0
+    value: 1
+  newSprite: {fileID: 0}

@@ -55,7 +55,6 @@ public class UpgradeManager : MonoBehaviour
     {
         List<UpgradeInformation> choices = new List<UpgradeInformation>();
 
-        // 1. Get 1 Valid Weapon Upgrade (Sword or Bow)
         List<UpgradeInformation> validWeapons = new List<UpgradeInformation>();
         foreach (var up in allSwordUpgrades) if (CanPurchaseUpgrade(up)) validWeapons.Add(up);
         foreach (var up in allBowUpgrades) if (CanPurchaseUpgrade(up)) validWeapons.Add(up);
@@ -66,7 +65,6 @@ public class UpgradeManager : MonoBehaviour
             choices.Add(pickedWeapon);
         }
 
-        // 2. Get 1 Valid Passive Upgrade
         List<UpgradeInformation> validPassives = new List<UpgradeInformation>();
         foreach (var up in allPassiveUpgrades) if (CanPurchaseUpgrade(up)) validPassives.Add(up);
 
@@ -76,7 +74,6 @@ public class UpgradeManager : MonoBehaviour
             choices.Add(pickedPassive);
         }
 
-        // 3. Get 1 Truly Random Remaining Valid Upgrade
         List<UpgradeInformation> allValid = new List<UpgradeInformation>();
         foreach (var up in allSwordUpgrades) if (CanPurchaseUpgrade(up) && !choices.Contains(up)) allValid.Add(up);
         foreach (var up in allBowUpgrades) if (CanPurchaseUpgrade(up) && !choices.Contains(up)) allValid.Add(up);
@@ -92,20 +89,25 @@ public class UpgradeManager : MonoBehaviour
 
     private bool CanPurchaseUpgrade(UpgradeInformation upgrade)
     {
-        // Passives don't use Bloons path restrictions, just check max tier logic if needed
         if (upgrade.category == UpgradeInformation.UpgradeCategory.Passive)
         {
             string passiveKey = "Passive_" + upgrade.upgradeID;
             int currentPassiveTier = unlockedTiers.ContainsKey(passiveKey) ? unlockedTiers[passiveKey] : 0;
-            return upgrade.tier == currentPassiveTier + 1;
+
+            // If maxTier is set to 0 or less, treat it as infinite stacking
+            if (upgrade.maxTier <= 0)
+            {
+                return true; 
+            }
+
+            // Otherwise, respect the maximum tier limit
+            return currentPassiveTier < upgrade.maxTier;
         }
 
         string pathKey = upgrade.category.ToString() + "_" + upgrade.pathID;
         int currentTierOnPath = unlockedTiers.ContainsKey(pathKey) ? unlockedTiers[pathKey] : 0;
-
         
         if (upgrade.tier != currentTierOnPath + 1) return false;
-
         
         if (upgrade.tier >= 3)
         {
@@ -124,20 +126,28 @@ public class UpgradeManager : MonoBehaviour
 
     public void SelectUpgrade(UpgradeInformation chosenUpgrade)
     {
-        // Commit progression
-        string trackingKey = chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Passive 
-            ? "Passive_" + chosenUpgrade.upgradeID 
-            : chosenUpgrade.category.ToString() + "_" + chosenUpgrade.pathID;
-            
-        unlockedTiers[trackingKey] = chosenUpgrade.tier;
+        string trackingKey;
 
-        if (chosenUpgrade.tier >= 3)
+        if (chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Passive)
         {
-            if (chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Sword) lockedSwordPath = chosenUpgrade.pathID;
-            if (chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Bow) lockedBowPath = chosenUpgrade.pathID;
+            trackingKey = "Passive_" + chosenUpgrade.upgradeID;
+            int currentTier = unlockedTiers.ContainsKey(trackingKey) ? unlockedTiers[trackingKey] : 0;
+            
+            // Increment the tier infinitely for passives
+            unlockedTiers[trackingKey] = currentTier + 1;
+        }
+        else
+        {
+            trackingKey = chosenUpgrade.category.ToString() + "_" + chosenUpgrade.pathID;
+            unlockedTiers[trackingKey] = chosenUpgrade.tier;
+
+            if (chosenUpgrade.tier >= 3)
+            {
+                if (chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Sword) lockedSwordPath = chosenUpgrade.pathID;
+                if (chosenUpgrade.category == UpgradeInformation.UpgradeCategory.Bow) lockedBowPath = chosenUpgrade.pathID;
+            }
         }
 
-        // Apply stats to PlayerLevellingStats asset via SettingsManager
         if (settingsManager != null && settingsManager.settings != null)
         {
             ApplyUpgradeEffect(chosenUpgrade, settingsManager.settings);
@@ -149,8 +159,6 @@ public class UpgradeManager : MonoBehaviour
 
         upgradePanel.SetActive(false);
         Time.timeScale = 1f;
-        // Cursor.visible = false;
-        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ApplyUpgradeEffect(UpgradeInformation upgrade, PlayerLevellingStats playerStats)
@@ -159,7 +167,21 @@ public class UpgradeManager : MonoBehaviour
         {
             ApplyModifier(playerStats, mod);
         }
-        Debug.Log($"Upgraded {upgrade.upgradeName} to Tier {upgrade.tier}");
+        Debug.Log($"Upgraded {upgrade.upgradeName}");
+        
+        if (upgrade.category == UpgradeInformation.UpgradeCategory.Sword) {
+            if (upgrade.newSprite != null) {
+                playerStats.SwordSprite = upgrade.newSprite;
+            }
+            if (playerStats.ExtraDaggerEnabled){
+                playerStats.DaggerSprite = playerStats.SwordSprite;
+            }
+        } else if (upgrade.category == UpgradeInformation.UpgradeCategory.Bow){
+            if (upgrade.newSprite != null) {
+                playerStats.BowSprite = upgrade.newSprite;
+            }
+        }
+        
         GameObject.FindWithTag("Player").GetComponent<UpdatePlayerWeapons>().UpdateWeapons();
     }
 
@@ -181,6 +203,14 @@ public class UpgradeManager : MonoBehaviour
             case StatType.ArrowShotCooldown: stats.ArrowShotCooldown = ApplyMath(stats.ArrowShotCooldown, mod); break;
             case StatType.ArrowPierce: stats.ArrowPierce = (int)ApplyMath(stats.ArrowPierce, mod); break;
             case StatType.ArrowRicochet: stats.ArrowRicochet = (int)ApplyMath(stats.ArrowRicochet, mod); break;
+            case StatType.PlayerSpeed: stats.PlayerSpeed = ApplyMath(stats.PlayerSpeed, mod); break;
+            case StatType.DamageReductionRatio: stats.DamageReductionRatio = ApplyMath(stats.DamageReductionRatio, mod); break;
+            case StatType.DashAbilityCooldown: stats.DashAbilityCooldown = ApplyMath(stats.DashAbilityCooldown, mod); break;
+            case StatType.FocusAbilityCooldown: stats.FocusAbilityCooldown = ApplyMath(stats.FocusAbilityCooldown, mod); break;
+            case StatType.total_health: stats.total_health = (int)ApplyMath(stats.total_health, mod); break;
+            case StatType.current_health: stats.current_health = (int)ApplyMath(stats.current_health, mod); break;
+            case StatType.shotCooldownReduction: stats.shotCooldownReduction = mod.value > 0; break;
+            case StatType.SwordAbilityCooldownReduction: stats.SwordAbilityCooldownReduction = mod.value > 0; break;
         }
     }
 

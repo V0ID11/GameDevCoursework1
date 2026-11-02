@@ -1072,6 +1072,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2122462708067913407, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
+      propertyPath: current_health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
       propertyPath: m_Name
       value: Slime
@@ -3843,8 +3847,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 344053527}
     - target: {fileID: 542640056600775977, guid: 507fb8180d3acb21cb1765b2600e0e29, type: 3}
+      propertyPath: max_enemies
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 542640056600775977, guid: 507fb8180d3acb21cb1765b2600e0e29, type: 3}
       propertyPath: round_length
-      value: 60
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 1254068817380367661, guid: 507fb8180d3acb21cb1765b2600e0e29, type: 3}
       propertyPath: m_Name

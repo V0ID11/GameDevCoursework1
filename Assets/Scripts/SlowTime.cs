@@ -9,11 +9,13 @@ public class SlowTime : MonoBehaviour
     public float timeout = 0;
     float slowTiming=0;
     bool slowed = false;
+    SettingsManager playerStats;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SlowAction = InputSystem.actions.FindAction("SlowTime");
+        playerStats = GetComponent<SettingsManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class SlowTime : MonoBehaviour
     {
         if (SlowAction.triggered && timeout <= 0) {
             Time.timeScale  = 0.5f;
-            timeout = cooldown;
+            timeout = cooldown * playerStats.settings.FocusAbilityCooldown;
             slowTiming = 1.5f;
             slowed = true;
             

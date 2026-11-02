@@ -15,8 +15,13 @@ MonoBehaviour:
   category: 0
   pathID: 0
   tier: 1
-  upgradeID: 
+  maxTier: 3
+  upgradeID: 5
   upgradeName: Hammer Tier 1
-  description: 
+  description: Increase Weapon Damage
   icon: {fileID: 0}
-  modifiers: []
+  modifiers:
+  - targetStat: 0
+    modifyMode: 0
+    value: 3
+  newSprite: {fileID: 0}

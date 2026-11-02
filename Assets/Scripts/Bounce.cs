@@ -9,9 +9,14 @@ public class Bounce : MonoBehaviour
     public int totalVelocity;
     int upDirection;
     int sideDirection;
+
+    SettingsManager playerStats;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerStats = GetComponent<SettingsManager>();
+
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = velocity;
         
@@ -19,7 +24,7 @@ public class Bounce : MonoBehaviour
             velocity = new Vector2(1f,0f);
         } else {
             velocity = new Vector2(Random.Range(-10,10), Random.Range(-10,10) );
-            Debug.Log("here");
+            // Debug.Log("here");
         }
 
         upDirection = (velocity.y >= 0) ? 1 : -1;
@@ -41,8 +46,8 @@ public class Bounce : MonoBehaviour
 
         float currentSpeed = totalVelocity  ;
         rb.linearVelocity = new Vector2(
-            Mathf.Cos(angle) * currentSpeed * sideDirection, 
-            Mathf.Sin(angle) * currentSpeed * upDirection
+            Mathf.Cos(angle) * currentSpeed * sideDirection * playerStats.settings.PlayerSpeed, 
+            Mathf.Sin(angle) * currentSpeed * upDirection  * playerStats.settings.PlayerSpeed
         );
     }
 
@@ -71,8 +76,8 @@ public class Bounce : MonoBehaviour
 
         float currentSpeed = totalVelocity  ;
         rb.linearVelocity = new Vector2(
-            Mathf.Cos(angle) * currentSpeed * sideDirection, 
-            Mathf.Sin(angle) * currentSpeed * upDirection
+            Mathf.Cos(angle) * currentSpeed * sideDirection * playerStats.settings.PlayerSpeed, 
+            Mathf.Sin(angle) * currentSpeed * upDirection  * playerStats.settings.PlayerSpeed
         );
     }
 
@@ -84,6 +89,9 @@ public class Bounce : MonoBehaviour
         int upDirection = (mouseLocation.y - transform.position.y > 0) ? 1 : -1;
         int sideDirection = (mouseLocation.x - transform.position.x > 0) ? 1 : -1;
         
-        rb.linearVelocity = new Vector2(Mathf.Cos(angle) * (totalVelocity  ) * sideDirection, Mathf.Sin(angle) * (totalVelocity  ) * upDirection);
+       rb.linearVelocity = new Vector2(
+            Mathf.Cos(angle) * totalVelocity * sideDirection * playerStats.settings.PlayerSpeed, 
+            Mathf.Sin(angle) * totalVelocity * upDirection  * playerStats.settings.PlayerSpeed
+        );
     }
 }
