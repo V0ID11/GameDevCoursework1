@@ -10,6 +10,7 @@ public class FireballExplosion : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.PlaySFX(SoundType.Explode);
         sr = GetComponent<SpriteRenderer>();
         weaponComponent = GetComponent<Weapon>(); // Grab the Weapon script on the explosion
     }

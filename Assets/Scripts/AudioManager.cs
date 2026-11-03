@@ -16,7 +16,9 @@ public enum SoundType
     SwordAttack,
     SwordHit,
     UpgradeGet,
-    XP
+    XP,
+    Boss,
+    Explode
 
 }
 

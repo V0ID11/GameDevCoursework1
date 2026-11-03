@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Arrow
   - Wall
+  - Boss
+  - XP
+  - Warning
   layers:
   - Default
   - TransparentFX

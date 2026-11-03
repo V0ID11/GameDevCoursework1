@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed982f387ff2c6199c41db386f7428a, type: 3}
+  m_Name: Minotaur
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLevellingStats
+  SwordDamage: 5
+  WeaponSize: 1
+  SpinSpeed: 0
+  ExtraDaggerEnabled: 0
+  ExtraDaggerDamage: 0
+  ExtraDaggerSize: 0
+  SwordAbilityCooldown: 0
+  AimLineEnabled: 0
+  AimLineSize: 0
+  ArrowSpeed: 0
+  ArrowDamage: 0
+  ArrowShotCooldown: 0
+  ArrowPierce: 0
+  ArrowRicochet: 0
+  PlayerSpeed: 1.2
+  DamageReductionRatio: 1
+  DashAbilityCooldown: 0
+  FocusAbilityCooldown: 0
+  total_health: 5
+  current_health: 5
+  shotCooldownReduction: 0
+  SwordAbilityCooldownReduction: 0
+  SwordSprite: {fileID: 0}
+  DaggerSprite: {fileID: 0}
+  BowSprite: {fileID: 0}

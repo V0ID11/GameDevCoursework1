@@ -7,9 +7,9 @@ public class OrchSpawner : MonoBehaviour
     public GameObject[] level1Enemies;
     public GameObject[] level2Enemies;
     public GameObject[] level3Enemies;
-    // public GameObject basicBoss;
-    // public GameObject meleeBoss;
-    // public GameObject rangedBoss;
+    public GameObject level1Boss;
+    public GameObject level2Boss;
+    public GameObject level3Boss;
 
     public float[] level1rates;
     public float[] level2rates;
@@ -46,24 +46,50 @@ public class OrchSpawner : MonoBehaviour
         Debug.Log(currentlevel);
         if (round_timer <= 0){
             
-            /*
             if (!boss)
-            {
-                currentlevel++;
-                //spawn boss
+            {   
+                foreach (GameObject enemy in spawned_enemies)
+                {
+                    Destroy(enemy);
+                }
+
+                GameObject bossToSpawn;
+
+                if (currentlevel % 3 == 1){bossToSpawn = level1Boss;}
+                else if (currentlevel % 3 == 2){bossToSpawn = level2Boss;}
+                else {bossToSpawn = level3Boss;}
+
+                Vector2 spawn_pos = new Vector2(Random.Range(left.transform.position.x + 0.5f, right.transform.position.x - 0.5f), 
+                                                    Random.Range(bottom.transform.position.y +0.5f, top.transform.position.y - 0.5f));
+
+                GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
+
+                warningObj.GetComponent<Warning>().Setup(bossToSpawn, this);
+
+                spawned_enemies.Add(warningObj);
+
+                AudioManager.instance.PlaySFX(SoundType.Boss);
+
                 boss = true;
-                // boss will reset our timer on death
-            }
-            */
-            if (currentlevel == 4)
+
+            } else
             {
-                endless = true;
-            }
-            else
-            {
-                currentlevel++;
-            }
-            round_timer = round_length;
+                if (GameObject.FindWithTag("Boss") != null || GameObject.FindWithTag("Warning") != null)
+                {
+                    return; 
+                }
+        
+                if (currentlevel == 4)
+                {
+                    endless = true;
+                }
+                else
+                {
+                    currentlevel++;
+                }
+                round_timer = round_length;
+                boss = false;
+        }
 
         } else
         {
@@ -73,16 +99,18 @@ public class OrchSpawner : MonoBehaviour
 
         spawned_enemies.RemoveAll(enemy => enemy == null);
 
-        if (spawned_enemies.Count == 0) {
+        if (!boss) {
+            if (spawned_enemies.Count == 0) {
+                
+                int number_to_spawn = Random.Range(spawned_enemies.Count + 1, max_enemies) - spawned_enemies.Count;
             
-            int number_to_spawn = Random.Range(spawned_enemies.Count + 1, max_enemies) - spawned_enemies.Count;
-           
-            spawn_enemies(number_to_spawn);
-            
-        } else if (spawn_timer <= 0 && spawned_enemies.Count < max_enemies) {
-            
-            int number_to_spawn = Random.Range(spawned_enemies.Count + 1, max_enemies) - spawned_enemies.Count;
-            spawn_enemies(number_to_spawn);
+                spawn_enemies(number_to_spawn);
+                
+            } else if (spawn_timer <= 0 && spawned_enemies.Count < max_enemies) {
+                
+                int number_to_spawn = Random.Range(spawned_enemies.Count + 1, max_enemies) - spawned_enemies.Count;
+                spawn_enemies(number_to_spawn);
+            }
         }
     }
 
