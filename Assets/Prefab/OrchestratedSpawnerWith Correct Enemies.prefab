@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1813154178589155842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2105224100780601962}
+  - component: {fileID: 4472857736923742171}
+  m_Layer: 0
+  m_Name: OrchestratedSpawnerWith Correct Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105224100780601962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813154178589155842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 450, y: 845, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4472857736923742171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813154178589155842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb7dd2186164534d94111cb594d642d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrchSpawner
+  level0Enemies:
+  - {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
+  level1Enemies:
+  - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
+  - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
+  - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
+  level2Enemies:
+  - {fileID: 2839975450338596557, guid: c2bd9d1a612b1bd42b3d4dbe486a0b38, type: 3}
+  - {fileID: 2839975450338596557, guid: ae7d2fb76dd1c304bb542d3dd595831e, type: 3}
+  - {fileID: 2839975450338596557, guid: 8231bca0f183c75e686f6e95aa6fbe1a, type: 3}
+  - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
+  - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
+  - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
+  level3Enemies:
+  - {fileID: 2839975450338596557, guid: c2bd9d1a612b1bd42b3d4dbe486a0b38, type: 3}
+  - {fileID: 2839975450338596557, guid: ae7d2fb76dd1c304bb542d3dd595831e, type: 3}
+  - {fileID: 2839975450338596557, guid: 8231bca0f183c75e686f6e95aa6fbe1a, type: 3}
+  - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
+  - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
+  - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
+  - {fileID: 2839975450338596557, guid: 5cb2d09404bb9bf46b4368be5e5db6da, type: 3}
+  - {fileID: 2839975450338596557, guid: fb90767166b2fd6cb87b39e230d7cca9, type: 3}
+  level1Boss: {fileID: 2839975450338596557, guid: 5c58089f641c6a54ba1db920c014f5cf, type: 3}
+  level2Boss: {fileID: 2839975450338596557, guid: 3785f38939b98c845a24ec22b2a24814, type: 3}
+  level3Boss: {fileID: 2839975450338596557, guid: d6299a9f993ae7f4a97d177183e0c231, type: 3}
+  level0rates:
+  - 1
+  level1rates:
+  - 60
+  - 20
+  - 20
+  level2rates:
+  - 40
+  - 20
+  - 20
+  - 10
+  - 5
+  - 5
+  level3rates:
+  - 10
+  - 5
+  - 5
+  - 10
+  - 5
+  - 5
+  - 40
+  - 20
+  endlessrates:
+  - 20
+  - 10
+  - 10
+  - 15
+  - 10
+  - 10
+  - 15
+  - 10
+  endless: 0
+  max_enemies: 6
+  top: {fileID: 0}
+  bottom: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  round_length: 65
+  round_timer: 0
+  boss: 0
+  spawn_cooldown: 5
+  spawn_timer: 0
+  warningPrefab: {fileID: 4415840823406238343, guid: c7cdac20a16ed44489d60be164eb1ea5, type: 3}
+  spawned_enemies: []

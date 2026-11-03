@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 
 public class OrchSpawner : MonoBehaviour
 {
+    public GameObject[] level0Enemies;
     public GameObject[] level1Enemies;
     public GameObject[] level2Enemies;
     public GameObject[] level3Enemies;
@@ -11,12 +12,13 @@ public class OrchSpawner : MonoBehaviour
     public GameObject level2Boss;
     public GameObject level3Boss;
 
+    public float[] level0rates;
     public float[] level1rates;
     public float[] level2rates;
     public float[] level3rates;
     public float[] endlessrates;
     public bool endless = false;
-    private int currentlevel = 1;
+    private int currentlevel = 0;
     public int max_enemies;
     float sum_of_rates = 0;
     
@@ -47,7 +49,13 @@ public class OrchSpawner : MonoBehaviour
         if (round_timer <= 0){
             
             if (!boss)
-            {   
+            {   if (currentlevel ==0){
+                    currentlevel++; 
+                    round_timer = round_length;
+                    boss = false;
+                    max_enemies=6;
+                    return;
+            }
                 foreach (GameObject enemy in spawned_enemies)
                 {
                     Destroy(enemy);
@@ -101,7 +109,8 @@ public class OrchSpawner : MonoBehaviour
 
         if (!boss) {
             if (spawned_enemies.Count == 0) {
-                
+                if (currentlevel ==0){max_enemies=2;}
+                else {max_enemies=6;}
                 int number_to_spawn = Random.Range(spawned_enemies.Count + 1, max_enemies) - spawned_enemies.Count;
             
                 spawn_enemies(number_to_spawn);
@@ -119,8 +128,8 @@ public class OrchSpawner : MonoBehaviour
         
         float[] currentRates;
         GameObject[] currentEnemies;
-
-        if (currentlevel == 1){currentRates = level1rates; currentEnemies = level1Enemies;}
+        if (currentlevel ==0){currentRates=level0rates; currentEnemies=level0Enemies; }
+        else if (currentlevel == 1){currentRates = level1rates; currentEnemies = level1Enemies; }
         else if (currentlevel == 2){currentRates = level2rates; currentEnemies = level2Enemies;}
         else if (currentlevel == 3){currentRates = level3rates; currentEnemies = level3Enemies;}
         else {currentRates = endlessrates; currentEnemies = level3Enemies;}

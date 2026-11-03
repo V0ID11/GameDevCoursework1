@@ -1249,6 +1249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb7dd2186164534d94111cb594d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrchSpawner
+  level0Enemies:
+  - {fileID: 1314092378}
   level1Enemies:
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
   - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
@@ -1269,6 +1271,11 @@ MonoBehaviour:
   - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
   - {fileID: 2839975450338596557, guid: 5cb2d09404bb9bf46b4368be5e5db6da, type: 3}
   - {fileID: 2839975450338596557, guid: fb90767166b2fd6cb87b39e230d7cca9, type: 3}
+  level1Boss: {fileID: 0}
+  level2Boss: {fileID: 0}
+  level3Boss: {fileID: 0}
+  level0rates:
+  - 1
   level1rates:
   - 60
   - 20
@@ -1564,6 +1571,7 @@ GameObject:
   - component: {fileID: 313333849}
   - component: {fileID: 313333848}
   - component: {fileID: 313333847}
+  - component: {fileID: 313333850}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1673,6 +1681,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313333845}
   m_CullTransparentMesh: 1
+--- !u!114 &313333850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313333845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99ff76e9a605c2f5977fbbd465244fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReloadScene
+  selectButton: {fileID: 313333847}
 --- !u!1 &313472864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,6 +5836,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 217329131}
   m_SourcePrefab: {fileID: 100100000, guid: d99de914fa68ae74aa9fe98bd825b224, type: 3}
+--- !u!1 &1314092378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
+  m_PrefabInstance: {fileID: 1984279738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1314182559
 GameObject:
   m_ObjectHideFlags: 0
