@@ -62,36 +62,54 @@ public class Health : MonoBehaviour
 
     public void SubtractHealth(int damage)
     {
-        if (i_frames_count <= 0) 
+        if (damage > 0)
         {
-            playerStats.settings.current_health -= (int) (damage * playerStats.settings.DamageReductionRatio); 
+            if (i_frames_count <= 0) 
+            {
+                playerStats.settings.current_health -= (int) (damage * playerStats.settings.DamageReductionRatio); 
+
+                OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
+
+                AudioManager.instance.PlaySFX(SoundType.SwordHit);
+                
+                if (playerStats.settings.current_health > 0)
+                {
+                    StartCoroutine(HitStopRoutine(0.2f));
+                }
+                
+                i_frames_count = i_frames;
+            }
+            
+            if (playerStats.settings.current_health <= 0)
+            {   
+                if (gameObject.CompareTag("Player")) 
+                {
+                    Time.timeScale = 0f;
+                }
+                else
+                {
+                    Time.timeScale = 1f;
+                    current_health = 0; 
+                    StartCoroutine(DeathFadeRoutine(0.5f));
+                }
+                
+            }
+        } else
+        {
+            playerStats.settings.current_health -= (int) (damage);
+            
+            if (playerStats.settings.current_health > playerStats.settings.total_health)
+            {
+                playerStats.settings.current_health = playerStats.settings.total_health;
+            }
 
             OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
 
-            AudioManager.instance.PlaySFX(SoundType.SwordHit);
-            
-            if (playerStats.settings.current_health > 0)
-            {
-                StartCoroutine(HitStopRoutine(0.2f));
-            }
-            
-            i_frames_count = i_frames;
+            AudioManager.instance.PlaySFX(SoundType.Heal);
         }
         
-        if (playerStats.settings.current_health <= 0)
-        {   
-            if (gameObject.CompareTag("Player")) 
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-                current_health = 0; 
-                StartCoroutine(DeathFadeRoutine(0.5f));
-            }
-            
-        }
+
+        
     }
 
     IEnumerator HitStopRoutine(float duration)
