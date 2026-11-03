@@ -40,18 +40,32 @@ public class EnemyShoot : MonoBehaviour
 
             GameObject newArrow = Instantiate(arrowPrefab, transform.position, transform.rotation);
 
-            if (newArrow.GetComponent<HomingEnemyArrow>() != null){
-                newArrow.GetComponent<HomingEnemyArrow>().speed = arrowSpeed* settingsManager.settings.ArrowSpeed;
+            // Safely check for Homing Arrow (Will skip for fireballs)
+            if (newArrow.TryGetComponent<HomingEnemyArrow>(out HomingEnemyArrow homing))
+            {
+                homing.speed = arrowSpeed * settingsManager.settings.ArrowSpeed;
             }
 
-            newArrow.GetComponent<ProjectileMovement>().velocity = direction * arrowSpeed* settingsManager.settings.ArrowSpeed;
+            // Both Arrow and Fireball have this, so it will run for both
+            if (newArrow.TryGetComponent<ProjectileMovement>(out ProjectileMovement projMove))
+            {
+                projMove.velocity = direction * arrowSpeed * settingsManager.settings.ArrowSpeed;
+            }
 
             newArrow.transform.Rotate(0, 0, -45);
 
-            newArrow.GetComponent<Weapon>().SetWeaponDamage(settingsManager.settings.ArrowDamage);
+            // Both Arrow and Fireball have this
+            if (newArrow.TryGetComponent<Weapon>(out Weapon weapon))
+            {
+                weapon.SetWeaponDamage(settingsManager.settings.ArrowDamage);
+            }
 
-            newArrow.GetComponent<ArrowCollision>().pierce = settingsManager.settings.ArrowPierce;
-            newArrow.GetComponent<ArrowCollision>().ricochet = settingsManager.settings.ArrowRicochet;
+            // Safely check for Arrow Collision (Will skip for fireballs)
+            if (newArrow.TryGetComponent<ArrowCollision>(out ArrowCollision arrowCol))
+            {
+                arrowCol.pierce = settingsManager.settings.ArrowPierce;
+                arrowCol.ricochet = settingsManager.settings.ArrowRicochet;
+            }
 
             AudioManager.instance.PlaySFX(SoundType.Arrow);
 
