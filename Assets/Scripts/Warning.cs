@@ -16,10 +16,13 @@ public class Warning : MonoBehaviour
     }
 
     void Update()
+{
+    timer -= Time.deltaTime;
+    
+    if (timer <= 0)
     {
-        timer -= Time.deltaTime;
-        
-        if (timer <= 0)
+        // Safety check to prevent crashing if the reference is null or destroyed
+        if (plannedEnemyPrefab != null)
         {
             GameObject realEnemy = Instantiate(plannedEnemyPrefab, transform.position, Quaternion.identity);
             
@@ -27,8 +30,13 @@ public class Warning : MonoBehaviour
             {
                 parentSpawner.spawned_enemies.Add(realEnemy);
             }
-
-            Destroy(gameObject);
         }
+        else
+        {
+            Debug.LogError("plannedEnemyPrefab was null or destroyed when the warning timer expired!", this);
+        }
+
+        Destroy(gameObject);
     }
+}
 }
