@@ -21,7 +21,7 @@ MonoBehaviour:
   description: 'Decrease dash cooldown
 
 '
-  icon: {fileID: 0}
+  icon: {fileID: 6533677672115869074, guid: f9896967e81f0834e916f8087808fa00, type: 3}
   modifiers:
   - targetStat: 16
     modifyMode: 1

@@ -21,7 +21,7 @@ MonoBehaviour:
   description: 'Decrease focus cooldown
 
 '
-  icon: {fileID: 0}
+  icon: {fileID: 8581363780399802525, guid: 025b333df365fe9499dce1885619f107, type: 3}
   modifiers:
   - targetStat: 17
     modifyMode: 1

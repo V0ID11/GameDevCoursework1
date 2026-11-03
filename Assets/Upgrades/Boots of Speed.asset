@@ -21,7 +21,7 @@ MonoBehaviour:
   description: 'Increase move speed
 
 '
-  icon: {fileID: 0}
+  icon: {fileID: -5130294652377279623, guid: aae8d3817c01d2d4abddd42fea97aa7b, type: 3}
   modifiers:
   - targetStat: 14
     modifyMode: 1

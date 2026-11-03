@@ -6,7 +6,7 @@ public class PlayerXP : MonoBehaviour
     public int total_xp;
     public int xp;
     public int level;
-    public int for_next_level; 
+    public int for_next_level = 1; // Set a default base requirement so it doesn't stay 0!
 
     public Action<int, int> OnXPChanged;
 
@@ -18,6 +18,12 @@ public class PlayerXP : MonoBehaviour
         xp = 0; 
         level = 1;
         
+        // Ensure for_next_level has a valid value if not set in inspector
+        if (for_next_level <= 0) 
+        {
+            for_next_level = 100;
+        }
+
         OnXPChanged?.Invoke(xp, for_next_level);
     }
 
@@ -26,7 +32,12 @@ public class PlayerXP : MonoBehaviour
         xp = xp - for_next_level;
         for_next_level = for_next_level * 2;
         level += 1;
-        AudioManager.instance.PlaySFX(SoundType.LevelUp);
+
+        // Safely play sound only if AudioManager exists
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(SoundType.LevelUp);
+        }
 
         // Trigger the upgrade selection screen
         if (upgradeManager != null)
@@ -44,10 +55,13 @@ public class PlayerXP : MonoBehaviour
         total_xp += incoming_xp;
         xp += incoming_xp;
         
-        while (xp >= for_next_level)
+        // Safety guard against infinite loops if for_next_level is accidentally 0
+        int safetyCounter = 0;
+        while (xp >= for_next_level && safetyCounter < 100)
         {
             level_up();
             Debug.Log("level up");
+            safetyCounter++;
         }
 
         OnXPChanged?.Invoke(xp, for_next_level);

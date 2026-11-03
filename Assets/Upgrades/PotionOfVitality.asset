@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 19
   upgradeName: Potion of Vitality
   description: Increase maximum health
-  icon: {fileID: 0}
+  icon: {fileID: -8136789363327431926, guid: 8c3cd8fda50b90445b2df5ca486b5ced, type: 3}
   modifiers:
   - targetStat: 18
     modifyMode: 1

@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Shader originalShader;
     private Shader whiteShader;
+    public GameObject GameOverScreen;
     
 
     public Action<int, int> OnTakeDamage;
@@ -84,7 +85,8 @@ public class Health : MonoBehaviour
             {   
                 if (gameObject.CompareTag("Player")) 
                 {
-                    Time.timeScale = 0f;
+                    GameOverScreen.SetActive(true);
+                    StartCoroutine(DeathFadeRoutine(0.5f));
                 }
                 else
                 {

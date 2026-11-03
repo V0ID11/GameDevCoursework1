@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 8
   upgradeName: Heavy Armour
   description: Decrease damage taken
-  icon: {fileID: 0}
+  icon: {fileID: -1189987072400875853, guid: 1958b6161c706044abb3b399b3033125, type: 3}
   modifiers:
   - targetStat: 15
     modifyMode: 1

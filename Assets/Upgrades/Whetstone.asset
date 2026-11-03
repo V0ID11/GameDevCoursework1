@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 23
   upgradeName: Whetstone
   description: Increase damage
-  icon: {fileID: 0}
+  icon: {fileID: 1803801540776554803, guid: f627a7d7ceaf25446ac135401575ad22, type: 3}
   modifiers:
   - targetStat: 0
     modifyMode: 1

@@ -12,8 +12,9 @@ public class WeaponHit : MonoBehaviour
     {
         playerHealth = transform.parent.GetComponent<Health>();
         player = GameObject.FindWithTag("Player");
+        if (player != null){
         playerStats = player.GetComponent<SettingsManager>();
-    }
+    }}
 
     void OnTriggerEnter2D(Collider2D collision)
     {
