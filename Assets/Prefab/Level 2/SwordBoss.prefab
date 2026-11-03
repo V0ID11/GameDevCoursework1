@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 6320215713025905874}
   - component: {fileID: 6504428340216386316}
+  - component: {fileID: 1340510135648509395}
   m_Layer: 7
   m_Name: SwordBoss
   m_TagString: Boss
@@ -402,6 +403,7 @@ MonoBehaviour:
   totalHealth: 25
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &6504428340216386316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +418,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   masterSettingsTemplate: {fileID: 11400000, guid: 1d1022ac4295b2b44945cac6e0116ff5, type: 2}
   settings: {fileID: 11400000, guid: e96ff180e0ad7a3f9a7d56f9704e74f2, type: 2}
+--- !u!114 &1340510135648509395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9c3cc1fb61f5e428c37c0a36625140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &5655511762824522034
 GameObject:
   m_ObjectHideFlags: 0
