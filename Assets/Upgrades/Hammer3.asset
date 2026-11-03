@@ -21,7 +21,7 @@ MonoBehaviour:
   description: 'Decrease passive spin speed, increase damage and size
 
 '
-  icon: {fileID: 0}
+  icon: {fileID: 4301844918096825189, guid: ce08d6e59269d1b86bd44ee944367295, type: 3}
   modifiers:
   - targetStat: 2
     modifyMode: 1
@@ -32,4 +32,4 @@ MonoBehaviour:
   - targetStat: 1
     modifyMode: 1
     value: 2
-  newSprite: {fileID: 0}
+  newSprite: {fileID: 4301844918096825189, guid: ce08d6e59269d1b86bd44ee944367295, type: 3}

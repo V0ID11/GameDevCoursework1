@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40597e98c315c4b682c42633ec5e5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardUI
-  iconImage: {fileID: 2106798341010825896}
+  iconImage: {fileID: 4040565053607686981}
   titleText: {fileID: 4755845680235269756}
   descriptionText: {fileID: 5347315222228065896}
   selectButton: {fileID: 9068153953339407949}

@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 22
   upgradeName: Scimitar Tier 3
   description: Increase secondary dagger size and damage
-  icon: {fileID: 0}
+  icon: {fileID: 7284219647814240080, guid: d282a4e9c231fb0d688467a3b19b2e6d, type: 3}
   modifiers:
   - targetStat: 4
     modifyMode: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
   - targetStat: 5
     modifyMode: 1
     value: 1.6
-  newSprite: {fileID: 0}
+  newSprite: {fileID: 7284219647814240080, guid: d282a4e9c231fb0d688467a3b19b2e6d, type: 3}

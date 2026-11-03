@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 16
   upgradeName: Homing Tier 2
   description: Arrows ricochet once
-  icon: {fileID: 0}
+  icon: {fileID: -5525561684334104984, guid: 1e076a21b5b41e44f9a95f64d566a4fb, type: 3}
   modifiers:
   - targetStat: 13
     modifyMode: 0

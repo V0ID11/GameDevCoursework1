@@ -21,7 +21,7 @@ MonoBehaviour:
   description: 'Increase arrow speed and maximize aim line
 
 '
-  icon: {fileID: 0}
+  icon: {fileID: -7772435429642446462, guid: bc6742646c817dee79778a14ee2c1577, type: 3}
   modifiers:
   - targetStat: 9
     modifyMode: 1
@@ -29,4 +29,4 @@ MonoBehaviour:
   - targetStat: 8
     modifyMode: 1
     value: 1.2
-  newSprite: {fileID: 0}
+  newSprite: {fileID: -7772435429642446462, guid: bc6742646c817dee79778a14ee2c1577, type: 3}

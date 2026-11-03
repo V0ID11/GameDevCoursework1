@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 21
   upgradeName: Scimitar Tier 2
   description: Increase secondary dagger damage
-  icon: {fileID: 0}
+  icon: {fileID: 7284219647814240080, guid: d282a4e9c231fb0d688467a3b19b2e6d, type: 3}
   modifiers:
   - targetStat: 4
     modifyMode: 0
