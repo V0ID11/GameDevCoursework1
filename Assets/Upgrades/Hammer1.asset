@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 5
   upgradeName: Hammer Tier 1
   description: Increase Weapon Damage
-  icon: {fileID: 0}
+  icon: {fileID: 4301844918096825189, guid: ce08d6e59269d1b86bd44ee944367295, type: 3}
   modifiers:
   - targetStat: 0
     modifyMode: 0

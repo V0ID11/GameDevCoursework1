@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 20
   upgradeName: Scimitar Tier 1
   description: Gain small secondary dagger
-  icon: {fileID: 0}
+  icon: {fileID: 7284219647814240080, guid: d282a4e9c231fb0d688467a3b19b2e6d, type: 3}
   modifiers:
   - targetStat: 3
     modifyMode: 2

@@ -19,9 +19,9 @@ MonoBehaviour:
   upgradeID: 3
   upgradeName: Crossbow Tier 3
   description: Hit shots decrease shot cooldown
-  icon: {fileID: 0}
+  icon: {fileID: -9208761201745400335, guid: 3418489c0b83064da96f852d7518e03b, type: 3}
   modifiers:
   - targetStat: 20
     modifyMode: 2
     value: 1
-  newSprite: {fileID: 0}
+  newSprite: {fileID: -9208761201745400335, guid: 3418489c0b83064da96f852d7518e03b, type: 3}

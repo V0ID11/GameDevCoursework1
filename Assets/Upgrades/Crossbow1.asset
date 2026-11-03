@@ -19,7 +19,7 @@ MonoBehaviour:
   upgradeID: 1
   upgradeName: Crossbow Tier 1
   description: Increase Arrow Damage
-  icon: {fileID: 0}
+  icon: {fileID: -9208761201745400335, guid: 3418489c0b83064da96f852d7518e03b, type: 3}
   modifiers:
   - targetStat: 10
     modifyMode: 0
