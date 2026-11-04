@@ -26,7 +26,7 @@ MonoBehaviour:
   ArrowShotCooldown: 0
   ArrowPierce: 0
   ArrowRicochet: 0
-  PlayerSpeed: 1
+  PlayerSpeed: 3
   DamageReductionRatio: 1
   DashAbilityCooldown: 0
   FocusAbilityCooldown: 0

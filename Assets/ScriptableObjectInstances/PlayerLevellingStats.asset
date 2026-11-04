@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed982f387ff2c6199c41db386f7428a, type: 3}
   m_Name: PlayerLevellingStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevellingStats
-  SwordDamage: 4
+  SwordDamage: 5
   WeaponSize: 1
-  SpinSpeed: 1
+  SpinSpeed: 300
   ExtraDaggerEnabled: 0
   ExtraDaggerDamage: 4
   ExtraDaggerSize: 1
   SwordAbilityCooldown: 1
   AimLineEnabled: 0
   AimLineSize: 1
-  ArrowSpeed: 1
+  ArrowSpeed: 8
   ArrowDamage: 3
-  ArrowShotCooldown: 1
+  ArrowShotCooldown: 0.5
   ArrowPierce: 0
   ArrowRicochet: 0
-  PlayerSpeed: 1
+  PlayerSpeed: 5
   DamageReductionRatio: 1
   DashAbilityCooldown: 1
   FocusAbilityCooldown: 1

@@ -18,7 +18,7 @@ public class OrchSpawner : MonoBehaviour
     public float[] level3rates;
     public float[] endlessrates;
     public bool endless = false;
-    private int currentlevel = 0;
+    public int currentlevel = 0;
     public int max_enemies;
     float sum_of_rates = 0;
     

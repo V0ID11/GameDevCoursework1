@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed982f387ff2c6199c41db386f7428a, type: 3}
   m_Name: BigSwordEnemy
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevellingStats
-  SwordDamage: 1
+  SwordDamage: 7
   WeaponSize: 1
-  SpinSpeed: 1
+  SpinSpeed: 150
   ExtraDaggerEnabled: 0
   ExtraDaggerDamage: 1
   ExtraDaggerSize: 1
@@ -26,12 +26,12 @@ MonoBehaviour:
   ArrowShotCooldown: 1
   ArrowPierce: 0
   ArrowRicochet: 0
-  PlayerSpeed: 1
+  PlayerSpeed: 3
   DamageReductionRatio: 1
   DashAbilityCooldown: 1
   FocusAbilityCooldown: 1
-  total_health: 10
-  current_health: -2
+  total_health: 30
+  current_health: 30
   shotCooldownReduction: 0
   SwordAbilityCooldownReduction: 0
   SwordSprite: {fileID: 0}

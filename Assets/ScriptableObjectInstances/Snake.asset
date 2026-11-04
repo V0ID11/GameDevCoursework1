@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed982f387ff2c6199c41db386f7428a, type: 3}
   m_Name: Snake
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevellingStats
-  SwordDamage: 3
+  SwordDamage: 5
   WeaponSize: 1
   SpinSpeed: 0
   ExtraDaggerEnabled: 0
@@ -26,12 +26,12 @@ MonoBehaviour:
   ArrowShotCooldown: 0
   ArrowPierce: 0
   ArrowRicochet: 0
-  PlayerSpeed: 1
+  PlayerSpeed: 7
   DamageReductionRatio: 1
   DashAbilityCooldown: 0
   FocusAbilityCooldown: 0
-  total_health: 10
-  current_health: 10
+  total_health: 1
+  current_health: 1
   shotCooldownReduction: 0
   SwordAbilityCooldownReduction: 0
   SwordSprite: {fileID: 0}
