@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 7967876725790558965}
   - component: {fileID: 6320215713025905874}
   - component: {fileID: 6504428340216386316}
+  - component: {fileID: -2321707449832172702}
   m_Layer: 7
   m_Name: Lich
   m_TagString: Boss
@@ -403,6 +404,7 @@ MonoBehaviour:
   totalHealth: 25
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &6504428340216386316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +419,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   masterSettingsTemplate: {fileID: 11400000, guid: 30cea7112b03186418a21f9be6413717, type: 2}
   settings: {fileID: 11400000, guid: e96ff180e0ad7a3f9a7d56f9704e74f2, type: 2}
+--- !u!114 &-2321707449832172702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839975450338596557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634bf5c2d89530d498e23cdf9f8f2a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  minotaur: {fileID: 2839975450338596557, guid: 5c58089f641c6a54ba1db920c014f5cf, type: 3}
+  knight: {fileID: 2839975450338596557, guid: 3785f38939b98c845a24ec22b2a24814, type: 3}
+  warningPrefab: {fileID: 4415840823406238343, guid: c7cdac20a16ed44489d60be164eb1ea5, type: 3}
 --- !u!1 &4845246393416629076
 GameObject:
   m_ObjectHideFlags: 0

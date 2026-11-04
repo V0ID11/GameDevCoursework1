@@ -3,11 +3,19 @@ using System.Collections;
 
 public class KnightAbility : MonoBehaviour
 {
-    private float normalDuration = 8f;
-    private float boostDuration = 2f;
+    private Rotate rotateScript;
+    private float normalRotate;
 
     void Start()
     {
+        rotateScript = GetComponentInChildren<Rotate>();
+        
+
+        if (rotateScript != null)
+        {
+            normalRotate = rotateScript.RotationSpeed;
+        }
+
         StartCoroutine(SpeedBoostRoutine());
     }
 
@@ -15,13 +23,17 @@ public class KnightAbility : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(normalDuration);
+            yield return new WaitForSeconds(8f);
 
-            // 2. DOUBLE THE SPEED
+            AudioManager.instance.PlaySFX(SoundType.BossAbility);
 
-            yield return new WaitForSeconds(boostDuration);
+            yield return new WaitForSeconds(0.5f);
 
-            // 4. REVERT THE SPEED
+            if (rotateScript != null) rotateScript.RotationSpeed = normalRotate * 3;
+            
+            yield return new WaitForSeconds(3f);  
+            
+            if (rotateScript != null) rotateScript.RotationSpeed = normalRotate;
         }
     }
 }

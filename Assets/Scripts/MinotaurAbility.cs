@@ -3,11 +3,20 @@ using System.Collections;
 
 public class MinotaurAbility : MonoBehaviour
 {
-    private float normalDuration = 8f;
-    private float boostDuration = 2f;
+
+    private Bounce bounceScript;
+    private int normalVelocity;
 
     void Start()
     {
+        bounceScript = GetComponent<Bounce>();
+
+        if (bounceScript != null)
+        {
+            normalVelocity = bounceScript.totalVelocity;
+        }
+
+
         StartCoroutine(SpeedBoostRoutine());
     }
 
@@ -15,13 +24,17 @@ public class MinotaurAbility : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(normalDuration);
+            yield return new WaitForSeconds(5f);
 
-            // 2. DOUBLE THE SPEED
+            AudioManager.instance.PlaySFX(SoundType.BossAbility);
 
-            yield return new WaitForSeconds(boostDuration);
+            yield return new WaitForSeconds(0.5f);
 
-            // 4. REVERT THE SPEED
+            if (bounceScript != null) bounceScript.totalVelocity = normalVelocity * 2;
+            
+            yield return new WaitForSeconds(2f);  
+            
+            if (bounceScript != null) bounceScript.totalVelocity = normalVelocity;
         }
     }
 }

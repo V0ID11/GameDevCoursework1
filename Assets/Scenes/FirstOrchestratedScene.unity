@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 32722065}
   - component: {fileID: 32722064}
   m_Layer: 6
-  m_Name: HorizontalWall
+  m_Name: BottomWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,6 +363,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 21c4a490b24ba2045bc815f7626a40ef, type: 3}
   - type: 14
     clip: {fileID: 8300000, guid: fd8b677b841fe484ca8dd9264befdcb9, type: 3}
+  - type: 15
+    clip: {fileID: 8300000, guid: b7f8695cf65a4f24eb37544298821146, type: 3}
 --- !u!82 &80258237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1328,6 +1330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb7dd2186164534d94111cb594d642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrchSpawner
+  level0Enemies:
+  - {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
   level1Enemies:
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
   - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
@@ -1351,6 +1355,7 @@ MonoBehaviour:
   level1Boss: {fileID: 2839975450338596557, guid: 5c58089f641c6a54ba1db920c014f5cf, type: 3}
   level2Boss: {fileID: 2839975450338596557, guid: 3785f38939b98c845a24ec22b2a24814, type: 3}
   level3Boss: {fileID: 2839975450338596557, guid: d6299a9f993ae7f4a97d177183e0c231, type: 3}
+  level0rates: []
   level1rates:
   - 60
   - 20
@@ -1386,7 +1391,7 @@ MonoBehaviour:
   bottom: {fileID: 32722061}
   left: {fileID: 344053527}
   right: {fileID: 1721299818}
-  round_length: 5
+  round_length: 60
   round_timer: 0
   boss: 0
   spawn_cooldown: 5
@@ -1774,7 +1779,7 @@ GameObject:
   - component: {fileID: 344053531}
   - component: {fileID: 344053530}
   m_Layer: 6
-  m_Name: VerticalWall
+  m_Name: LeftWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2538,7 +2543,7 @@ GameObject:
   - component: {fileID: 484932211}
   - component: {fileID: 484932210}
   m_Layer: 6
-  m_Name: HorizontalWall
+  m_Name: TopWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6608,7 +6613,7 @@ GameObject:
   - component: {fileID: 1721299822}
   - component: {fileID: 1721299821}
   m_Layer: 6
-  m_Name: VerticalWall
+  m_Name: RightWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
