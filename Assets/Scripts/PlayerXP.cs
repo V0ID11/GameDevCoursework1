@@ -6,10 +6,12 @@ public class PlayerXP : MonoBehaviour
     public int total_xp;
     public int xp;
     public int level;
-    public int for_next_level = 1; // Set a default base requirement so it doesn't stay 0!
+    public int for_next_level = 100;
+
+    [Header("Upgrade Queuing")]
+    public int pendingUpgrades = 0; 
 
     public Action<int, int> OnXPChanged;
-
     public UpgradeManager upgradeManager;
 
     void Start()
@@ -18,7 +20,6 @@ public class PlayerXP : MonoBehaviour
         xp = 0; 
         level = 1;
         
-        // Ensure for_next_level has a valid value if not set in inspector
         if (for_next_level <= 0) 
         {
             for_next_level = 100;
@@ -27,27 +28,23 @@ public class PlayerXP : MonoBehaviour
         OnXPChanged?.Invoke(xp, for_next_level);
     }
 
+    void Update()
+    {
+        CheckAndTriggerNextUpgrade();
+    }
+
     void level_up()
     {
         xp = xp - for_next_level;
         for_next_level = for_next_level * 2;
         level += 1;
 
-        // Safely play sound only if AudioManager exists
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlaySFX(SoundType.LevelUp);
         }
 
-        // Trigger the upgrade selection screen
-        if (upgradeManager != null)
-        {
-            upgradeManager.TriggerLevelUp();
-        }
-        else
-        {
-            Debug.LogWarning("UpgradeManager reference not set on PlayerXP!");
-        }
+        pendingUpgrades++;
     }
 
     public void AddXP(int incoming_xp)
@@ -55,15 +52,33 @@ public class PlayerXP : MonoBehaviour
         total_xp += incoming_xp;
         xp += incoming_xp;
         
-        // Safety guard against infinite loops if for_next_level is accidentally 0
         int safetyCounter = 0;
         while (xp >= for_next_level && safetyCounter < 100)
         {
             level_up();
-            Debug.Log("level up");
+            Debug.Log("level up tracked");
             safetyCounter++;
         }
 
         OnXPChanged?.Invoke(xp, for_next_level);
+    }
+
+    void CheckAndTriggerNextUpgrade()
+    {
+        // Only trigger if we have pending upgrades and an upgrade manager exists
+        if (pendingUpgrades > 0 && upgradeManager != null)
+        {
+            // Check if the upgrade panel is currently inactive (meaning the player finished their last choice)
+            if (upgradeManager.upgradePanel != null && !upgradeManager.upgradePanel.activeSelf)
+            {
+                pendingUpgrades--;
+                upgradeManager.TriggerLevelUp();
+            }
+        }
+        else if (pendingUpgrades > 0 && upgradeManager == null)
+        {
+            Debug.LogWarning("UpgradeManager reference not set on PlayerXP!");
+            pendingUpgrades = 0;
+        }
     }
 }
