@@ -8,7 +8,7 @@ public class Warning : MonoBehaviour
     private OrchSpawner parentSpawner;
     private float timer;
     private int level=1;
-    int scale = 1;
+    int scale = 0;
 
     public void Setup(GameObject enemyToSpawn, int currentlevel=-1, OrchSpawner spawner = null)
     {
