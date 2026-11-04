@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   totalHealth: 25
   current_health: 0
-  xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  xp: {fileID: 6619854448105333962, guid: 988e1096711bba94aa827b80def9f66d, type: 3}
   GameOverScreen: {fileID: 0}
 --- !u!114 &6504428340216386316
 MonoBehaviour:
