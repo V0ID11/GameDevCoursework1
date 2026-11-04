@@ -456,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SwapPlayer
   swordPivot: {fileID: 7620848914305621396}
   bowPivot: {fileID: 5217094421060194371}
+  aimLine: {fileID: 8810649604816970391}
   swordEnabled: 1
   cooldown: 5
   timeout: 0

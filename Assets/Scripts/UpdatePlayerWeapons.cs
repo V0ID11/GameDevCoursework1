@@ -55,9 +55,7 @@ public class UpdatePlayerWeapons : MonoBehaviour
         if (aimLine != null){
             if (settingsManager.settings.AimLineEnabled){
                 aimLine.SetActive(true);
-                LineRenderer line = aimLine.GetComponent<LineRenderer>();
-                line.startWidth = line.startWidth * settingsManager.settings.AimLineSize;
-                line.endWidth = line.endWidth * settingsManager.settings.AimLineSize;
+                aimLine.GetComponent<AimLineController>().maxAimDistance = settingsManager.settings.AimLineSize;
             }
         }
     }
