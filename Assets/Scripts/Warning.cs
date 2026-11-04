@@ -39,11 +39,11 @@ public class Warning : MonoBehaviour
                 scale += 1;
             }
 
-            ScalableStats.settings.total_health = (int) ScalableStats.settings.total_health * (1 + (1/(scale)));
-            ScalableStats.settings.current_health = (int) ScalableStats.settings.current_health * (1 + (1/(scale))); 
-            ScalableStats.settings.SwordDamage = (int) ScalableStats.settings.SwordDamage * (1 + (1/(scale)));
-            ScalableStats.settings.ArrowDamage = (int) ScalableStats.settings.ArrowDamage * (1 + (1/(scale)));
-            ScalableStats.settings.ExtraDaggerDamage = (int) ScalableStats.settings.ExtraDaggerDamage * (1 + (1/(scale)));
+            ScalableStats.settings.total_health = (int) ScalableStats.settings.total_health * (1 + ((scale) / 10));
+            ScalableStats.settings.current_health = (int) ScalableStats.settings.current_health * (1 + ((scale) / 10)); 
+            ScalableStats.settings.SwordDamage = (int) ScalableStats.settings.SwordDamage * (1 + ((scale) / 10));
+            ScalableStats.settings.ArrowDamage = (int) ScalableStats.settings.ArrowDamage * (1 + ((scale) / 10));
+            ScalableStats.settings.ExtraDaggerDamage = (int) ScalableStats.settings.ExtraDaggerDamage * (1 + ((scale) / 10));
 
 
             
