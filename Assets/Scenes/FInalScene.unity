@@ -1473,6 +1473,7 @@ MonoBehaviour:
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
   - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
   - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
+  - {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
   level2Enemies:
   - {fileID: 2839975450338596557, guid: c2bd9d1a612b1bd42b3d4dbe486a0b38, type: 3}
   - {fileID: 2839975450338596557, guid: ae7d2fb76dd1c304bb542d3dd595831e, type: 3}
@@ -1480,6 +1481,7 @@ MonoBehaviour:
   - {fileID: 2839975450338596557, guid: e0243ab39d3c70c4998ce78369137576, type: 3}
   - {fileID: 2839975450338596557, guid: ad4415694c1dedd4ba458bfe547aaa18, type: 3}
   - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
+  - {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
   level3Enemies:
   - {fileID: 2839975450338596557, guid: c2bd9d1a612b1bd42b3d4dbe486a0b38, type: 3}
   - {fileID: 2839975450338596557, guid: ae7d2fb76dd1c304bb542d3dd595831e, type: 3}
@@ -1489,38 +1491,47 @@ MonoBehaviour:
   - {fileID: 2839975450338596557, guid: b5f013d9f8c23d94d98c7c00167c5c03, type: 3}
   - {fileID: 2839975450338596557, guid: 5cb2d09404bb9bf46b4368be5e5db6da, type: 3}
   - {fileID: 2839975450338596557, guid: fb90767166b2fd6cb87b39e230d7cca9, type: 3}
+  - {fileID: 2839975450338596557, guid: 0c463aae38f0fff4a86af6583fa7a54f, type: 3}
+  - {fileID: 2839975450338596557, guid: 343088cbd2c1512429237ed846c1f869, type: 3}
   level1Boss: {fileID: 2839975450338596557, guid: 5c58089f641c6a54ba1db920c014f5cf, type: 3}
   level2Boss: {fileID: 2839975450338596557, guid: 3785f38939b98c845a24ec22b2a24814, type: 3}
   level3Boss: {fileID: 2839975450338596557, guid: d6299a9f993ae7f4a97d177183e0c231, type: 3}
-  level0rates: []
+  level0rates:
+  - 1
   level1rates:
-  - 60
-  - 20
-  - 20
-  level2rates:
+  - 100
+  - 50
   - 40
-  - 20
-  - 20
   - 10
-  - 5
-  - 5
+  level2rates:
+  - 80
+  - 40
+  - 40
+  - 10
+  - 10
+  - 10
+  - 10
   level3rates:
   - 10
-  - 5
-  - 5
   - 10
-  - 5
-  - 5
+  - 10
+  - 10
+  - 10
+  - 10
+  - 50
   - 40
-  - 20
+  - 40
+  - 10
   endlessrates:
+  - 30
   - 20
-  - 10
-  - 10
-  - 15
-  - 10
-  - 10
-  - 15
+  - 20
+  - 30
+  - 20
+  - 30
+  - 20
+  - 20
+  - 20
   - 10
   endless: 0
   max_enemies: 6
@@ -1528,7 +1539,7 @@ MonoBehaviour:
   bottom: {fileID: 32722061}
   left: {fileID: 344053527}
   right: {fileID: 1721299818}
-  round_length: 60
+  round_length: 120
   round_timer: 0
   boss: 0
   spawn_cooldown: 5

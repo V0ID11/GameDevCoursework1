@@ -37,7 +37,7 @@ public class OrchSpawner : MonoBehaviour
     public List<GameObject> spawned_enemies; 
 
     void Start() {
-        round_timer = round_length;
+        round_timer = round_length / 2;
 
         spawned_enemies = new List<GameObject>();
     }
