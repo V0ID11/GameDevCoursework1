@@ -1391,7 +1391,7 @@ MonoBehaviour:
   bottom: {fileID: 32722061}
   left: {fileID: 344053527}
   right: {fileID: 1721299818}
-  round_length: 60
+  round_length: 5
   round_timer: 0
   boss: 0
   spawn_cooldown: 5

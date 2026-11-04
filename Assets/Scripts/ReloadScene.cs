@@ -27,6 +27,6 @@ public class ReloadScene : MonoBehaviour
     public void OnClickChoice() 
     {
         Debug.Log("Here");
-        SceneManager.LoadScene("GameOverScreenStuff", LoadSceneMode.Single);
+        SceneManager.LoadScene("FinalScene", LoadSceneMode.Single);
     }
 }
