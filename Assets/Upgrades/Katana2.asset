@@ -26,5 +26,5 @@ MonoBehaviour:
   modifiers:
   - targetStat: 6
     modifyMode: 1
-    value: 0.5
+    value: 0.8
   newSprite: {fileID: 0}

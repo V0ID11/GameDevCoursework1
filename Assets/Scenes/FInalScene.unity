@@ -1540,7 +1540,7 @@ MonoBehaviour:
   bottom: {fileID: 32722061}
   left: {fileID: 344053527}
   right: {fileID: 1721299818}
-  round_length: 10
+  round_length: 20
   round_timer: 0
   boss: 0
   spawn_cooldown: 5
@@ -4272,12 +4272,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 720157111}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: SkipLevel, Assembly-CSharp
+        m_MethodName: SkipLevelButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4296,7 +4296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4756,10 +4756,10 @@ RectTransform:
   - {fileID: 896102012}
   - {fileID: 313472865}
   - {fileID: 1990074948}
-  - {fileID: 1506653688}
-  - {fileID: 265783553}
   - {fileID: 1282994002}
   - {fileID: 720157110}
+  - {fileID: 1506653688}
+  - {fileID: 265783553}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5017,8 +5017,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

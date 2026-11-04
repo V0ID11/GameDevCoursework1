@@ -23,11 +23,11 @@ MonoBehaviour:
   modifiers:
   - targetStat: 0
     modifyMode: 1
-    value: 1.5
+    value: 1.1
   - targetStat: 4
     modifyMode: 1
-    value: 1.5
+    value: 1.1
   - targetStat: 10
     modifyMode: 1
-    value: 1.5
+    value: 1.1
   newSprite: {fileID: 0}

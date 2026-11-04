@@ -24,7 +24,7 @@ MonoBehaviour:
   - targetStat: 3
     modifyMode: 2
     value: 1
-  - targetStat: 8
+  - targetStat: 5
     modifyMode: 1
-    value: 0.8
+    value: 0.5
   newSprite: {fileID: 0}
