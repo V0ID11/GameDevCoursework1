@@ -11,6 +11,7 @@ public class UpgradeCardUI : MonoBehaviour
 
     private UpgradeInformation assignedUpgrade;
     private UpgradeManager upgradeManager;
+    public GameObject tier3tooltip;
 
     public void Setup(UpgradeInformation upgrade, UpgradeManager manager)
     {
@@ -20,6 +21,10 @@ public class UpgradeCardUI : MonoBehaviour
         iconImage.sprite = upgrade.icon;
         titleText.text = upgrade.upgradeName;
         descriptionText.text = upgrade.description;
+
+        if (upgrade.tier >= 3){
+            tier3tooltip.SetActive(true);
+        }
 
         selectButton.onClick.RemoveAllListeners();
         selectButton.onClick.AddListener(() => OnClickChoice());
