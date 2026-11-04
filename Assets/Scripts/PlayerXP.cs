@@ -22,7 +22,7 @@ public class PlayerXP : MonoBehaviour
         
         if (for_next_level <= 0) 
         {
-            for_next_level = 100;
+            for_next_level = 1;
         }
 
         OnXPChanged?.Invoke(xp, for_next_level);
