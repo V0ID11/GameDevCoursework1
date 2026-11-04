@@ -316,6 +316,7 @@ MonoBehaviour:
   totalHealth: 10
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &8043448823349386444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
-  masterSettingsTemplate: {fileID: 11400000, guid: 1b76babb309e0d83cb8f0860ca97d927, type: 2}
+  masterSettingsTemplate: {fileID: 11400000, guid: cce9f5f87b51e1c42a830086e1fca68d, type: 2}
   settings: {fileID: 0}
 --- !u!1 &6694536040780682248
 GameObject:

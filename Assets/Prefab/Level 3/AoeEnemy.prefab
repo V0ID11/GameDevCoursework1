@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 5
+  totalVelocity: 1
 --- !u!114 &6320215713025905874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +239,7 @@ MonoBehaviour:
   totalHealth: 10
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &-324159279756097226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,8 +484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21579e6e9857f014791e5ee8be3968c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cooldown: 3
-  arrowSpeed: 5
+  cooldown: 1
+  arrowSpeed: 1
   arrowPrefab: {fileID: 3879182552150183790, guid: b0c6ca379a0919f408eaa08765dc237d, type: 3}
 --- !u!114 &5887502633970851249
 MonoBehaviour:

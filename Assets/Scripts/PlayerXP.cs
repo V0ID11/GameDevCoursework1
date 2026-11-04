@@ -6,7 +6,7 @@ public class PlayerXP : MonoBehaviour
     public int total_xp;
     public int xp;
     public int level;
-    public int for_next_level = 100;
+    public int for_next_level;
 
     [Header("Upgrade Queuing")]
     public int pendingUpgrades = 0; 
@@ -36,7 +36,7 @@ public class PlayerXP : MonoBehaviour
     void level_up()
     {
         xp = xp - for_next_level;
-        for_next_level = for_next_level * 2;
+        for_next_level = ((level * (level - 3)) / 2) + 3;
         level += 1;
 
         if (AudioManager.instance != null)

@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 3
+  totalVelocity: 1
 --- !u!114 &2122462708067913407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  damage: 5
+  damage: 1
 --- !u!70 &6940905855542827940
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

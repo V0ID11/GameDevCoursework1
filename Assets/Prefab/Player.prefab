@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 5
+  totalVelocity: 1
 --- !u!114 &5721866496530444434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +427,7 @@ MonoBehaviour:
   totalHealth: 100
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &2338604383394165687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +475,7 @@ MonoBehaviour:
   xp: 0
   level: 0
   for_next_level: 1
+  pendingUpgrades: 0
   upgradeManager: {fileID: 0}
 --- !u!114 &3325563570012834282
 MonoBehaviour:
@@ -552,9 +554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4587b375be98a4baa3532995056a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cooldown: 0.5
+  cooldown: 1
   timeout: 0
-  arrowSpeed: 8
+  arrowSpeed: 1
   arrowPrefab: {fileID: 3879182552150183790, guid: 1c7747e908fdc8745a379109fc391034, type: 3}
 --- !u!114 &5101499659915141381
 MonoBehaviour:
@@ -740,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  damage: 5
+  damage: 1
 --- !u!1 &7620848914305621396
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  RotationSpeed: 400
+  RotationSpeed: 1
 --- !u!114 &115322926505055544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a8b5de96530cefd9a0737287610fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordAttack
-  cooldown: 1.5
+  cooldown: 1
   timeout: 0
   duration: 2.5
   speedScaling: 3

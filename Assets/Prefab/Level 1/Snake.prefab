@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 7
+  totalVelocity: 1
 --- !u!114 &2122462708067913407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ MonoBehaviour:
   totalHealth: 1
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &-1191347892336701651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a7845d2bc64192a499d1cc35e7173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
-  masterSettingsTemplate: {fileID: 11400000, guid: 1b76babb309e0d83cb8f0860ca97d927, type: 2}
+  masterSettingsTemplate: {fileID: 11400000, guid: 0a689cca65f6dbb42b4cd7f6bfb8b941, type: 2}
   settings: {fileID: 0}
 --- !u!1 &6694536040780682248
 GameObject:
@@ -532,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f974b1916f2eff10bace1ee9c81229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  damage: 3
+  damage: 1
 --- !u!70 &6940905855542827940
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 5
+  totalVelocity: 1
 --- !u!114 &6320215713025905874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +396,7 @@ MonoBehaviour:
   totalHealth: 15
   current_health: 0
   xp: {fileID: 6619854448105333962, guid: 3783684b854d5242eba6267a87d95f29, type: 3}
+  GameOverScreen: {fileID: 0}
 --- !u!114 &-8794911423850970777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,4 +911,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  RotationSpeed: 400
+  RotationSpeed: 1

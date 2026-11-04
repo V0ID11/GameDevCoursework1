@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
   velocity: {x: -5, y: 4}
-  totalVelocity: 5
+  totalVelocity: 1
 --- !u!114 &6320215713025905874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,4 +914,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb224cbea9e35f88a34f60f7b427335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotate
-  RotationSpeed: 150
+  RotationSpeed: 1

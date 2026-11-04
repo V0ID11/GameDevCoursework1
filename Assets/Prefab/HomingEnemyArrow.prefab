@@ -230,5 +230,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1271de280c5a751c5ab62993dd8637d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomingEnemyArrow
-  ttl: 1.5
-  speed: 5
+  ttl: 4
+  speed: 1
