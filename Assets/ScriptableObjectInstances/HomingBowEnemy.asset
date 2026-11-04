@@ -21,7 +21,7 @@ MonoBehaviour:
   SwordAbilityCooldown: 0
   AimLineEnabled: 0
   AimLineSize: 1
-  ArrowSpeed: 4
+  ArrowSpeed: 3
   ArrowDamage: 5
   ArrowShotCooldown: 4
   ArrowPierce: 0

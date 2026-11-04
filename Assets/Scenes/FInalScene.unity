@@ -1409,7 +1409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: -80}
+  m_AnchoredPosition: {x: -225, y: 30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &198481593
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   bottom: {fileID: 32722061}
   left: {fileID: 344053527}
   right: {fileID: 1721299818}
-  round_length: 120
+  round_length: 90
   round_timer: 0
   boss: 0
   spawn_cooldown: 5
@@ -3353,7 +3353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: 30}
+  m_AnchoredPosition: {x: -225, y: -80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &541615948

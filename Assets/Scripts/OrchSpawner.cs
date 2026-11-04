@@ -86,6 +86,22 @@ public class OrchSpawner : MonoBehaviour
                 {
                     return; 
                 }
+
+                // spawn barrels
+                Vector2 spawn_pos = new Vector2(Random.Range(left.transform.position.x + 0.5f, right.transform.position.x - 0.5f), 
+                                                    Random.Range(bottom.transform.position.y +0.5f, top.transform.position.y - 0.5f));
+
+                GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
+                warningObj.GetComponent<Warning>().Setup(level0Enemies[0], currentlevel,this);
+                spawned_enemies.Add(warningObj);
+                spawn_pos = new Vector2(Random.Range(left.transform.position.x + 0.5f, right.transform.position.x - 0.5f), 
+                                                    Random.Range(bottom.transform.position.y +0.5f, top.transform.position.y - 0.5f));
+
+                GameObject warningObj2 = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
+                warningObj2.GetComponent<Warning>().Setup(level0Enemies[0], currentlevel,this);
+                spawned_enemies.Add(warningObj2);
+
+
         
                 if (currentlevel == 4)
                 {

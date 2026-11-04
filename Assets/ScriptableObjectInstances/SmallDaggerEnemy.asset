@@ -30,8 +30,8 @@ MonoBehaviour:
   DamageReductionRatio: 1
   DashAbilityCooldown: 1
   FocusAbilityCooldown: 1
-  total_health: 20
-  current_health: 20
+  total_health: 15
+  current_health: 15
   shotCooldownReduction: 0
   SwordAbilityCooldownReduction: 0
   SwordSprite: {fileID: 0}

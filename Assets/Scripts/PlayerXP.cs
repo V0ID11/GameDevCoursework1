@@ -36,7 +36,11 @@ public class PlayerXP : MonoBehaviour
     void level_up()
     {
         xp = xp - for_next_level;
-        for_next_level = ((level * (level - 3)) / 2) + 3;
+        for_next_level += 1;
+        if(for_next_level > 5)
+        {
+            for_next_level = 5;
+        }
         level += 1;
 
         if (AudioManager.instance != null)

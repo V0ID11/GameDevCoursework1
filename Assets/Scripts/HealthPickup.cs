@@ -15,7 +15,7 @@ public class HealthPickup : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision){
-        player_hp_component.SubtractHealth(-5);
+        player_hp_component.SubtractHealth(-15);
         AudioManager.instance.PlaySFX(SoundType.XP);
         Destroy(this.transform.parent.gameObject);
     }
