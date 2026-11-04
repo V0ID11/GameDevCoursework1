@@ -7,8 +7,9 @@ public class Warning : MonoBehaviour
     private GameObject plannedEnemyPrefab;
     private OrchSpawner parentSpawner;
     private float timer;
+    private int level;
 
-    public void Setup(GameObject enemyToSpawn, OrchSpawner spawner = null)
+    public void Setup(GameObject enemyToSpawn, int currentlevel, OrchSpawner spawner = null)
     {
         plannedEnemyPrefab = enemyToSpawn;
         if (spawner != null)
@@ -16,6 +17,7 @@ public class Warning : MonoBehaviour
             parentSpawner = spawner;
         }
         timer = warningDuration;
+        level = currentlevel; 
     }
 
     void Update()
@@ -28,6 +30,15 @@ public class Warning : MonoBehaviour
         if (plannedEnemyPrefab != null)
         {
             GameObject realEnemy = Instantiate(plannedEnemyPrefab, transform.position, Quaternion.identity);
+            SettingsManager ScalableStats = realEnemy.GetComponent<SettingsManager>();
+
+            ScalableStats.settings.total_health = ScalableStats.settings.total_health * (1 + (1/(level*3)));
+            ScalableStats.settings.current_health = ScalableStats.settings.current_health * (1 + (1/(level*3))); 
+            ScalableStats.settings.SwordDamage = ScalableStats.settings.SwordDamage * (1 + (1/(level*3)));
+            ScalableStats.settings.ArrowDamage = ScalableStats.settings.ArrowDamage * (1 + (1/(level*3)));
+            ScalableStats.settings.ExtraDaggerDamage = ScalableStats.settings.ExtraDaggerDamage * (1 + (1/(level*3)));
+
+
             
             if (parentSpawner != null)
             {

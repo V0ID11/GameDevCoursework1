@@ -90,6 +90,7 @@ public class OrchSpawner : MonoBehaviour
                 if (currentlevel == 4)
                 {
                     endless = true;
+                    currentlevel++;
                 }
                 else
                 {
@@ -152,7 +153,7 @@ public class OrchSpawner : MonoBehaviour
                     
                     GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
 
-                    warningObj.GetComponent<Warning>().Setup(currentEnemies[j], this);
+                    warningObj.GetComponent<Warning>().Setup(currentEnemies[j], currentlevel, this);
 
                     spawned_enemies.Add(warningObj);
 
