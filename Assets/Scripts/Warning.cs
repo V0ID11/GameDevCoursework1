@@ -7,7 +7,8 @@ public class Warning : MonoBehaviour
     private GameObject plannedEnemyPrefab;
     private OrchSpawner parentSpawner;
     private float timer;
-    private int level;
+    private int level=1;
+    int scale = 1;
 
     public void Setup(GameObject enemyToSpawn, int currentlevel=-1, OrchSpawner spawner = null)
     {
@@ -33,11 +34,16 @@ public class Warning : MonoBehaviour
             GameObject realEnemy = Instantiate(plannedEnemyPrefab, transform.position, Quaternion.identity);
             SettingsManager ScalableStats = realEnemy.GetComponent<SettingsManager>();
 
-            ScalableStats.settings.total_health = ScalableStats.settings.total_health * (1 + (1/(level*3)));
-            ScalableStats.settings.current_health = ScalableStats.settings.current_health * (1 + (1/(level*3))); 
-            ScalableStats.settings.SwordDamage = ScalableStats.settings.SwordDamage * (1 + (1/(level*3)));
-            ScalableStats.settings.ArrowDamage = ScalableStats.settings.ArrowDamage * (1 + (1/(level*3)));
-            ScalableStats.settings.ExtraDaggerDamage = ScalableStats.settings.ExtraDaggerDamage * (1 + (1/(level*3)));
+            
+            if (level % 3 == 0){
+                scale += 1;
+            }
+
+            ScalableStats.settings.total_health = (int) ScalableStats.settings.total_health * (1 + (1/(scale)));
+            ScalableStats.settings.current_health = (int) ScalableStats.settings.current_health * (1 + (1/(scale))); 
+            ScalableStats.settings.SwordDamage = (int) ScalableStats.settings.SwordDamage * (1 + (1/(scale)));
+            ScalableStats.settings.ArrowDamage = (int) ScalableStats.settings.ArrowDamage * (1 + (1/(scale)));
+            ScalableStats.settings.ExtraDaggerDamage = (int) ScalableStats.settings.ExtraDaggerDamage * (1 + (1/(scale)));
 
 
             
