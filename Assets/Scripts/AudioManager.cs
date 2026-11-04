@@ -18,7 +18,8 @@ public enum SoundType
     UpgradeGet,
     XP,
     Boss,
-    Explode
+    Explode,
+    BossAbility
 
 }
 

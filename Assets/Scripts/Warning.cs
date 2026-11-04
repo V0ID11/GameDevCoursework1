@@ -8,10 +8,13 @@ public class Warning : MonoBehaviour
     private OrchSpawner parentSpawner;
     private float timer;
 
-    public void Setup(GameObject enemyToSpawn, OrchSpawner spawner)
+    public void Setup(GameObject enemyToSpawn, OrchSpawner spawner = null)
     {
         plannedEnemyPrefab = enemyToSpawn;
-        parentSpawner = spawner;
+        if (spawner != null)
+        {
+            parentSpawner = spawner;
+        }
         timer = warningDuration;
     }
 

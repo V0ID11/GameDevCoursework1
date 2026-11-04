@@ -69,6 +69,8 @@ public class Health : MonoBehaviour
             {
                 playerStats.settings.current_health -= (int) (damage * playerStats.settings.DamageReductionRatio); 
 
+                current_health = playerStats.settings.current_health;
+
                 OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
 
                 AudioManager.instance.PlaySFX(SoundType.SwordHit);
@@ -104,6 +106,8 @@ public class Health : MonoBehaviour
             {
                 playerStats.settings.current_health = playerStats.settings.total_health;
             }
+
+            current_health = playerStats.settings.current_health;
 
             OnTakeDamage?.Invoke(playerStats.settings.current_health, playerStats.settings.total_health);
 
