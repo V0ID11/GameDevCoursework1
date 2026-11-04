@@ -72,7 +72,7 @@ public class OrchSpawner : MonoBehaviour
 
                 GameObject warningObj = Instantiate(warningPrefab, spawn_pos, Quaternion.identity);
 
-                warningObj.GetComponent<Warning>().Setup(bossToSpawn, this);
+                warningObj.GetComponent<Warning>().Setup(bossToSpawn, currentlevel,this);
 
                 spawned_enemies.Add(warningObj);
 

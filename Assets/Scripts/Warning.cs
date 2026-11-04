@@ -9,7 +9,7 @@ public class Warning : MonoBehaviour
     private float timer;
     private int level;
 
-    public void Setup(GameObject enemyToSpawn, int currentlevel, OrchSpawner spawner = null)
+    public void Setup(GameObject enemyToSpawn, int currentlevel=-1, OrchSpawner spawner = null)
     {
         plannedEnemyPrefab = enemyToSpawn;
         if (spawner != null)
@@ -17,7 +17,8 @@ public class Warning : MonoBehaviour
             parentSpawner = spawner;
         }
         timer = warningDuration;
-        level = currentlevel; 
+        if (currentlevel != -1){
+        level = currentlevel; }
     }
 
     void Update()
