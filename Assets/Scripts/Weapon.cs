@@ -48,6 +48,8 @@ public class Weapon : MonoBehaviour
             else if (gameObject.name == "Dagger")
             {
                 damage = settingsManager.settings.ExtraDaggerDamage;
+            } else {
+                damage = settingsManager.settings.SwordDamage;
             }
         }
         
